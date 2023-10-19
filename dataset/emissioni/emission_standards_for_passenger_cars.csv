@@ -1,0 +1,26 @@
+Tier,Date (type approval),Date (first registration),CO,THC,NMHC,NH3,NOx,HC+NOx,PM,PN [#/km],Brake PM10[b]
+Diesel
+Euro 1[c],July 1992,January 1993,2.72 (3.16),–,–,–,–,0.97 (1.13),0.14 (0.18),–,–
+Euro 2,January 1996,January 1997,1.0,–,–,–,–,0.7,0.08,–,–
+Euro 3,January 2000,January 2001,0.66,–,–,–,0.50,0.56,0.05,–,–
+Euro 4,January 2005,January 2006,0.50,–,–,–,0.25,0.30,0.025,–,–
+Euro 5a,September 2009,January 2011,0.50,–,–,–,0.180,0.230,0.005,–,–
+Euro 5b,September 2011,January 2013,0.50,–,–,–,0.180,0.230,0.0045,6×1011,–
+Euro 6b,September 2014,September 2015,0.50,–,–,–,0.080,0.170,0.0045,6×1011,–
+Euro 6c,–,September 2018,0.50,–,–,–,0.080,0.170,0.0045,6×1011,–
+Euro 6d-Temp,September 2017,September 2019,0.50,–,–,–,0.080,0.170,0.0045,6×1011,–
+Euro 6d,January 2020,January 2021,0.50,–,–,–,0.080,0.170,0.0045,6×1011,–
+Petrol
+Euro 1[c],July 1992,January 1993,2.72 (3.16),–,–,–,–,0.97 (1.13),–,–,–
+Euro 2,January 1996,January 1997,2.2,–,–,–,–,0.5,–,–,–
+Euro 3,January 2000,January 2001,2.3,0.20,–,–,0.15,–,–,–,–
+Euro 4,January 2005,January 2006,1.0,0.10,–,–,0.08,–,–,–,–
+Euro 5a,September 2009,January 2011,1.0,0.10,0.068,–,0.060,–,0.005[d],–,–
+Euro 5b,September 2011,January 2013,1.0,0.10,0.068,–,0.060,–,0.0045[d],–,–
+Euro 6b,September 2014,September 2015,1.0,0.10,0.068,–,0.060,–,0.0045[d],6×1011[e],–
+Euro 6c,–,September 2018,1.0,0.10,0.068,–,0.060,–,0.0045[d],6×1011,–
+Euro 6d-Temp,September 2017,September 2019,1.0,0.10,0.068,–,0.060,–,0.0045[d],6×1011,–
+Euro 6d,January 2020,January 2021,1.0,0.10,0.068,–,0.060,–,0.0045[d],6×1011,–
+Petrol and diesel
+Euro 7[12][f](proposed),July 2025[12],July 2025[12],0.50,0.10,0.068,0.02,0.060,–,0.0045,6×1011,0.007
+"^Before Euro 5, passenger vehicles > 2,500 kg were type approved aslight commercial vehiclesN1Class I^Brake particle emissions (PM10). Only regulated for M1, N1 vehicles and only as PM - not PN. After 2035 the limit drops to 0.003. HDV will still not be subject to brake particle emissions regulation even after 2035.^abValues in parentheses are conformity of production (COP) limits^abcdefApplies only to vehicles with direct injection engines^6×1012/km within first three years from Euro 6b effective dates^Euro 7 harmonizes emission limits for all N1 and M1 vehicles"

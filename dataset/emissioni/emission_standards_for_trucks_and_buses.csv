@@ -1,0 +1,14 @@
+Tier,Date,Test cycle,CO,HC[a],NOx,NH3[b],PM,PN[c][#/kWh],N2O,CH4,HCHO,Smoke [m−1],Brake PM10[d]
+Euro I,"1992, < 85 kW",ECE R49,4.5,1.1,8.0,,0.612,,,,,,
+"1992, > 85 kW",4.5,1.1,8.0,,0.36,,,,,
+Euro II,October 1995,4.0,1.1,7.0,,0.25,,,,,,
+October 1997,4.0,1.1,7.0,,0.15,,,,,,
+Euro III,October 1999 EEVs[e]only,ESC & ELR,1.5,0.25,2.0,,0.02,,,,,0.15,
+October 2000,2.1,0.66,5.0,,0.100.13[f],,,,,0.8,
+Euro IV,October 2005,1.5,0.46,3.5,,0.02,,,,,0.5,
+Euro V,October 2008,1.5,0.46,2.0,,0.02,,,,,0.5,
+Euro VI,31 December 2012[24],WHSC,1.5,0.13,0.4,10(ppm),0.01,8×1011,,,,,
+WHTC,4.0,0.16,0.46,10(ppm),0.01,6×1011,,,,,
+Euro VII (proposed),1 July 2027[25],WHTCcold,3.5,0.2,0.35,0.065(g),0.012,5×1011,0.16,0.5,0.03,,N/A
+WHTChot,0.2,0.05,0.09,0.065(g),0.008,2×1011,0.1,0.35,0.03,,N/A
+"^In EURO VI, HC has been replaced by the measurement of “THC” – Total HydroCarbons. HC and THC are not necessarily completely comparable values. In EURO VII, THC has been replaced by the measurement of “NMOG” - Non-Methane hydrocarbons and the Oxygenated Hydrocarbons. THC and NMOG are not necessarily completely comparable values.^EURO VI limits NH3measured in ppm pr. kWh, whereas EURO VII limits NH3measured in mg pr. kWh. The EURO VII limit values for NH3listed in this table has been recalculated from mg to g. A limited 2023 study has shown that certain EURO VI, Step D buses are able to meet the EURO VII NH3limits.[23]^In Euro VII, “PN” includes smaller particles sizes. The cut off value is lowered from PN23 to PN10. This means that PN in EURO VII includes particulates down to 10 nm as opposed to only down to 23 nm in Euro VI.^Brake particle emissions (PM10). Only regulated for M1, N1 vehicles and only as PM - not PN. After 2035 HDV will still not be subject to brake particle emissions regulation.^enhanced environmentally friendly vehicle^for engines of less than 0.75 litres swept volume per cylinder and a rated power speed of more than 3,000 per minute."
