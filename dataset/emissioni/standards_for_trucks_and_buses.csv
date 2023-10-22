@@ -1,8 +1,0 @@
-Tier,Date,Test cycle,CO,HC[a],NOx,NH3[b],PM,PN[c][#/kWh],N2O,CH4,HCHO,Smoke [m−1],Brake PM10[d]
-Euro I,"1992, < 85 kW",ECE R49,4.5,1.1,8.0,,0.612,,,,,,
-Euro II,October 1995,4.0,1.1,7.0,,0.25,,,,,,
-Euro III,October 1999 EEVs[e]only,ESC & ELR,1.5,0.25,2.0,,0.02,,,,,0.15,
-Euro IV,October 2005,1.5,0.46,3.5,,0.02,,,,,0.5,
-Euro V,October 2008,1.5,0.46,2.0,,0.02,,,,,0.5,
-Euro VI,31 December 2012[24],WHSC,1.5,0.13,0.4,10(ppm),0.01,8×1011,,,,,
-Euro VII (proposed),1 July 2027[25],WHTCcold,3.5,0.2,0.35,0.065(g),0.012,5×1011,0.16,0.5,0.03,,N/A
