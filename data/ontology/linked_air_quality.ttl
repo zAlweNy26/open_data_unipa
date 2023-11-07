@@ -1,0 +1,21 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.wikidata.org/entity/Q2025> a owl:Thing ;
+    rdfs:label "carbon monoxide" .
+
+<http://www.wikidata.org/entity/Q207895> a owl:Thing ;
+    rdfs:label "nitrogen dioxide" .
+
+<http://www.wikidata.org/entity/Q2270> a owl:Thing ;
+    rdfs:label "benzene" .
+
+<http://www.wikidata.org/entity/Q36933> a owl:Thing ;
+    rdfs:label "ozone" .
+
+<http://www.wikidata.org/entity/Q48035511> a owl:Thing ;
+    rdfs:label "PM10 (including PM 2.5)" .
+
+<http://www.wikidata.org/entity/Q5282> a owl:Thing ;
+    rdfs:label "sulfur dioxide" .
+

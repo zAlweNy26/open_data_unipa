@@ -1,0 +1,111 @@
+@prefix : <http://www.semanticweb.org/aria-ontology-cb-dn/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+
+@base <http://www.semanticweb.org/aria-ontology-cb-dn/> .
+
+# Ontologia di base
+
+<http://www.semanticweb.org/aria-ontology-cb-dn/ontology> rdf:type owl:Ontology .
+
+# Classi
+
+:Comune rdf:type owl:Class .
+:Popolazione rdf:type owl:Class .
+:AreaVerde rdf:type owl:Class .
+:StazioneMeteorologica rdf:type owl:Class .
+:MisurazioneQualitaAria rdf:type owl:Class .
+:Veicolo rdf:type owl:Class .
+:ClasseInquinamento rdf:type owl:Class .
+
+# Sottoclassi
+
+:Motocicli rdf:type owl:Class ;
+           rdfs:subClassOf owl:Veicolo .
+
+:Autovetture rdf:type owl:Class ;
+             rdfs:subClassOf owl:Veicolo .
+
+:Autobus rdf:type owl:Class ;
+         rdfs:subClassOf owl:Veicolo .
+
+:Motrici rdf:type owl:Class ;
+         rdfs:subClassOf owl:Veicolo .
+
+:Industriali rdf:type owl:Class ;
+             rdfs:subClassOf owl:Veicolo .
+
+:Euro0 rdf:type owl:Class ;
+       rdfs:label "Classe Inquinamento Euro 0" ;
+       rdfs:subClassOf owl:ClasseInquinamento .
+
+:Euro1 rdf:type owl:Class ;
+       rdfs:label "Classe Inquinamento Euro 1" ;
+       rdfs:subClassOf owl:ClasseInquinamento .
+
+:Euro2 rdf:type owl:Class ;
+       rdfs:label "Classe Inquinamento Euro 2" ;
+       rdfs:subClassOf owl:ClasseInquinamento .
+
+:Euro3 rdf:type owl:Class ;
+       rdfs:label "Classe Inquinamento Euro 3" ;
+       rdfs:subClassOf owl:ClasseInquinamento .
+
+:Euro4 rdf:type owl:Class ;
+       rdfs:label "Classe Inquinamento Euro 4" ;
+       rdfs:subClassOf owl:ClasseInquinamento .
+
+:Euro5 rdf:type owl:Class ;
+       rdfs:label "Classe Inquinamento Euro 5" ;
+       rdfs:subClassOf owl:ClasseInquinamento .
+
+:Euro6 rdf:type owl:Class ;
+       rdfs:label "Classe Inquinamento Euro 6" ;
+       rdfs:subClassOf owl:ClasseInquinamento .
+
+# Proprietà
+
+:haRicoveri rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Popolazione ;
+            rdfs:range xsd:integer .
+
+:haPopolazione rdf:type owl:ObjectProperty ;
+               rdfs:domain :AreaVerde ;
+               rdfs:range :Popolazione .
+
+:haAreaVerde rdf:type owl:ObjectProperty ;
+             rdfs:domain :Comune ;
+             rdfs:range :AreaVerde .
+
+:haStazioneMeteorologica rdf:type owl:ObjectProperty ;
+                         rdfs:domain :Comune ;
+                         rdfs:range :StazioneMeteorologica .
+
+:localizzataIn rdf:type owl:ObjectProperty ;
+               rdfs:domain :StazioneMeteorologica ;
+               rdfs:range :AreaVerde .
+
+:monitoraInquinante rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :StazioneMeteorologica ;
+                    rdfs:range xsd:string .
+
+:haQualitaAria rdf:type owl:ObjectProperty ;
+               rdfs:domain :AreaVerde ;
+               rdfs:range :MisurazioneQualitaAria .
+
+:haDensitaPopolazione rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :AreaVerde ;
+                      rdfs:range xsd:integer .
+
+# Proprietà Geografiche
+:latitudine rdf:type owl:DatatypeProperty ;
+            rdfs:domain [:StazioneMeteorologica :AreaVerde] ;
+            rdfs:range xsd:float .
+
+:longitudine rdf:type owl:DatatypeProperty ;
+             rdfs:domain [:StazioneMeteorologica :AreaVerde] ;
+             rdfs:range xsd:float .
