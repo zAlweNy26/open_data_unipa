@@ -25,47 +25,47 @@
 # Sottoclassi
 
 :Motocicli rdf:type owl:Class ;
-           rdfs:subClassOf owl:Veicolo .
+           rdfs:subClassOf :Veicolo .
 
 :Autovetture rdf:type owl:Class ;
-             rdfs:subClassOf owl:Veicolo .
+             rdfs:subClassOf :Veicolo .
 
 :Autobus rdf:type owl:Class ;
-         rdfs:subClassOf owl:Veicolo .
+         rdfs:subClassOf :Veicolo .
 
 :Motrici rdf:type owl:Class ;
-         rdfs:subClassOf owl:Veicolo .
+         rdfs:subClassOf :Veicolo .
 
 :Industriali rdf:type owl:Class ;
-             rdfs:subClassOf owl:Veicolo .
+             rdfs:subClassOf :Veicolo .
 
 :Euro0 rdf:type owl:Class ;
        rdfs:label "Classe Inquinamento Euro 0" ;
-       rdfs:subClassOf owl:ClasseInquinamento .
+       rdfs:subClassOf :ClasseInquinamento .
 
 :Euro1 rdf:type owl:Class ;
        rdfs:label "Classe Inquinamento Euro 1" ;
-       rdfs:subClassOf owl:ClasseInquinamento .
+       rdfs:subClassOf :ClasseInquinamento .
 
 :Euro2 rdf:type owl:Class ;
        rdfs:label "Classe Inquinamento Euro 2" ;
-       rdfs:subClassOf owl:ClasseInquinamento .
+       rdfs:subClassOf :ClasseInquinamento .
 
 :Euro3 rdf:type owl:Class ;
        rdfs:label "Classe Inquinamento Euro 3" ;
-       rdfs:subClassOf owl:ClasseInquinamento .
+       rdfs:subClassOf :ClasseInquinamento .
 
 :Euro4 rdf:type owl:Class ;
        rdfs:label "Classe Inquinamento Euro 4" ;
-       rdfs:subClassOf owl:ClasseInquinamento .
+       rdfs:subClassOf :ClasseInquinamento .
 
 :Euro5 rdf:type owl:Class ;
        rdfs:label "Classe Inquinamento Euro 5" ;
-       rdfs:subClassOf owl:ClasseInquinamento .
+       rdfs:subClassOf :ClasseInquinamento .
 
 :Euro6 rdf:type owl:Class ;
        rdfs:label "Classe Inquinamento Euro 6" ;
-       rdfs:subClassOf owl:ClasseInquinamento .
+       rdfs:subClassOf :ClasseInquinamento .
 
 # Proprietà
 
@@ -109,14 +109,10 @@
                rdfs:domain :AreaVerde ;
                rdfs:range :MisurazioneQualitaAria .
 
-:haDensitaPopolazione rdf:type owl:DatatypeProperty ;
-                      rdfs:domain :AreaVerde ;
-                      rdfs:range xsd:integer .
-
 :latitudine rdf:type owl:DatatypeProperty ;
-            rdfs:domain [:StazioneMeteorologica :AreaVerde] ;
+            rdfs:domain :StazioneMeteorologica , :AreaVerde ;
             rdfs:range xsd:float .
 
 :longitudine rdf:type owl:DatatypeProperty ;
-             rdfs:domain [:StazioneMeteorologica :AreaVerde] ;
+             rdfs:domain :StazioneMeteorologica , :AreaVerde ;
              rdfs:range xsd:float .
