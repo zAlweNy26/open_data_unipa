@@ -1,118 +1,304 @@
 @prefix : <http://www.semanticweb.org/aria-ontology-cb-dn/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
-
 @base <http://www.semanticweb.org/aria-ontology-cb-dn/> .
 
-# Ontologia di base
+<http://www.semanticweb.org/aria-ontology-cb-dn/ontology> rdf:type owl:Ontology .
 
-<http://www.qualitadellaria.it/ontology> rdf:type owl:Ontology .
+#################################################################
+#    Annotation properties
+#################################################################
 
-# Classi
+###  http://www.semanticweb.org/aria-ontology-cb-dn/StazioneMeteorologica
+:StazioneMeteorologica rdf:type owl:AnnotationProperty .
 
-:Comune rdf:type owl:Class .
-:Popolazione rdf:type owl:Class .
-:AreaVerde rdf:type owl:Class .
-:StazioneMeteorologica rdf:type owl:Class .
-:MisurazioneQualitaAria rdf:type owl:Class .
-:Veicolo rdf:type owl:Class .
-:ClasseInquinamento rdf:type owl:Class .
 
-# Sottoclassi
+#################################################################
+#    Object Properties
+#################################################################
 
-:Motocicli rdf:type owl:Class ;
-           rdfs:subClassOf :Veicolo .
-
-:Autovetture rdf:type owl:Class ;
-             rdfs:subClassOf :Veicolo .
-
-:Autobus rdf:type owl:Class ;
-         rdfs:subClassOf :Veicolo .
-
-:Motrici rdf:type owl:Class ;
-         rdfs:subClassOf :Veicolo .
-
-:Industriali rdf:type owl:Class ;
-             rdfs:subClassOf :Veicolo .
-
-:Euro0 rdf:type owl:Class ;
-       rdfs:label "Classe Inquinamento Euro 0" ;
-       rdfs:subClassOf :ClasseInquinamento .
-
-:Euro1 rdf:type owl:Class ;
-       rdfs:label "Classe Inquinamento Euro 1" ;
-       rdfs:subClassOf :ClasseInquinamento .
-
-:Euro2 rdf:type owl:Class ;
-       rdfs:label "Classe Inquinamento Euro 2" ;
-       rdfs:subClassOf :ClasseInquinamento .
-
-:Euro3 rdf:type owl:Class ;
-       rdfs:label "Classe Inquinamento Euro 3" ;
-       rdfs:subClassOf :ClasseInquinamento .
-
-:Euro4 rdf:type owl:Class ;
-       rdfs:label "Classe Inquinamento Euro 4" ;
-       rdfs:subClassOf :ClasseInquinamento .
-
-:Euro5 rdf:type owl:Class ;
-       rdfs:label "Classe Inquinamento Euro 5" ;
-       rdfs:subClassOf :ClasseInquinamento .
-
-:Euro6 rdf:type owl:Class ;
-       rdfs:label "Classe Inquinamento Euro 6" ;
-       rdfs:subClassOf :ClasseInquinamento .
-
-# Proprietà
-
-:haClasseInquinamento rdf:type owl:ObjectProperty ;
-                      rdfs:domain :Veicolo ;
-                      rdfs:range :ClasseInquinamento .
-
-:haLimiteInquinante rdf:type owl:DatatypeProperty ;
-                    rdfs:domain :ClasseInquinamento ;
-                    rdfs:range xsd:integer .
-
-:haRicoveri rdf:type owl:DatatypeProperty ;
-            rdfs:domain :Popolazione ;
-            rdfs:range xsd:integer .
-
-:haPopolazione rdf:type owl:ObjectProperty ;
-               rdfs:domain :Comune ;
-               rdfs:range :Popolazione .
-
+###  http://www.semanticweb.org/aria-ontology-cb-dn/haAreaVerde
 :haAreaVerde rdf:type owl:ObjectProperty ;
              rdfs:domain :Comune ;
              rdfs:range :AreaVerde .
 
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/haPopolazione
+:haPopolazione rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:domain :Comune ;
+               rdfs:range :Popolazione .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/haStazioneMeteorologica
 :haStazioneMeteorologica rdf:type owl:ObjectProperty ;
                          rdfs:domain :Comune ;
                          rdfs:range :StazioneMeteorologica .
 
-:localizzataIn rdf:type owl:ObjectProperty ;
-               rdfs:domain :StazioneMeteorologica ;
-               rdfs:range :AreaVerde .
 
-:monitoraInquinante rdf:type owl:DatatypeProperty ;
+###  http://www.semanticweb.org/aria-ontology-cb-dn/ontology#haMisuraQualitàAria
+:haMisuraQualitàAria rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf owl:topObjectProperty ;
+                     rdfs:domain :StazioneMeteorologica ;
+                     rdfs:range :MisurazioneQualitaAria .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/ontology#hasCircolanti
+:hasCircolanti rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:domain :Comune ;
+               rdfs:range :Circolazione .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/ontology#hasClasseInquinamento
+:hasClasseInquinamento rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf owl:topObjectProperty ;
+                       rdfs:domain :Autobus ,
+                                   :Autovetture ,
+                                   :Industriali ,
+                                   :Motocicli ,
+                                   :Motrici ;
+                       rdfs:range :Euro0 ,
+                                  :Euro1 ,
+                                  :Euro2 ,
+                                  :Euro3 ,
+                                  :Euro4 ,
+                                  :Euro5 ,
+                                  :Euro6 .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/ontology#hasCoordinates
+:hasCoordinates rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdfs:domain :StazioneMeteorologica ;
+                rdfs:range :coordinate .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/ontology#hasInquinante
+:hasInquinante rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:domain :Euro0 ,
+                           :Euro1 ,
+                           :Euro2 ,
+                           :Euro3 ,
+                           :Euro4 ,
+                           :Euro5 ,
+                           :Euro6 ;
+               rdfs:range :Inquinanti .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/ontology#monitoraInquinante
+:monitoraInquinante rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty ;
                     rdfs:domain :StazioneMeteorologica ;
-                    rdfs:range xsd:string .
+                    rdfs:range :Inquinanti .
 
-:haValoreInquinante rdf:type owl:DatatypeProperty ;
-                    rdfs:domain :MisurazioneQualitaAria ;
-                    rdfs:range xsd:float .
 
-:haQualitaAria rdf:type owl:ObjectProperty ;
-               rdfs:domain :AreaVerde ;
-               rdfs:range :MisurazioneQualitaAria .
+#################################################################
+#    Data properties
+#################################################################
 
+###  http://www.semanticweb.org/aria-ontology-cb-dn/latitudine
 :latitudine rdf:type owl:DatatypeProperty ;
-            rdfs:domain :StazioneMeteorologica , :AreaVerde ;
+            rdfs:domain :coordinate ;
             rdfs:range xsd:float .
 
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/longitudine
 :longitudine rdf:type owl:DatatypeProperty ;
-             rdfs:domain :StazioneMeteorologica , :AreaVerde ;
+             rdfs:domain :coordinate ;
              rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/percentualeRicoveri
+:percentualeRicoveri rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :Popolazione ;
+                     rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/popolazioneTotale
+:popolazioneTotale rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain :Popolazione ;
+                   rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/ontology#C6H6
+:C6H6 rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf owl:topDataProperty ;
+      rdfs:domain :Inquinanti ;
+      rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/ontology#CO_8h
+:CO_8h rdf:type owl:DatatypeProperty ;
+       rdfs:subPropertyOf owl:topDataProperty ;
+       rdfs:domain :Inquinanti ;
+       rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/ontology#NO2
+:NO2 rdf:type owl:DatatypeProperty ;
+     rdfs:subPropertyOf owl:topDataProperty ;
+     rdfs:domain :Inquinanti ;
+     rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/ontology#O3
+:O3 rdf:type owl:DatatypeProperty ;
+    rdfs:subPropertyOf owl:topDataProperty ;
+    rdfs:domain :Inquinanti ;
+    rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/ontology#PM10
+:PM10 rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf owl:topDataProperty ;
+      rdfs:domain :Inquinanti ;
+      rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/ontology#PM25
+:PM25 rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf owl:topDataProperty ;
+      rdfs:domain :Inquinanti ;
+      rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/ontology#SO2
+:SO2 rdf:type owl:DatatypeProperty ;
+     rdfs:subPropertyOf owl:topDataProperty ;
+     rdfs:domain :Inquinanti ;
+     rdfs:range xsd:float .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/AreaVerde
+:AreaVerde rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/Autobus
+:Autobus rdf:type owl:Class ;
+         rdfs:subClassOf :Circolazione .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/Autovetture
+:Autovetture rdf:type owl:Class ;
+             rdfs:subClassOf :Circolazione .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/Circolazione
+:Circolazione rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/ClasseEuroVeicolo
+:ClasseEuroVeicolo rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/Comune
+:Comune rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/Industriali
+:Industriali rdf:type owl:Class ;
+             rdfs:subClassOf :Circolazione .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/Euro0
+:Euro0 rdf:type owl:Class ;
+                     rdfs:subClassOf :ClasseEuroVeicolo .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/Euro1
+:Euro1 rdf:type owl:Class ;
+                     rdfs:subClassOf :ClasseEuroVeicolo .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/Euro2
+:Euro2 rdf:type owl:Class ;
+                     rdfs:subClassOf :ClasseEuroVeicolo .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/Euro3
+:Euro3 rdf:type owl:Class ;
+                     rdfs:subClassOf :ClasseEuroVeicolo .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/Euro4
+:Euro4 rdf:type owl:Class ;
+                     rdfs:subClassOf :ClasseEuroVeicolo .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/Euro5
+:Euro5 rdf:type owl:Class ;
+                     rdfs:subClassOf :ClasseEuroVeicolo .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/Euro6
+:Euro6 rdf:type owl:Class ;
+                     rdfs:subClassOf :ClasseEuroVeicolo .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/MisurazioneQualitaAria
+:MisurazioneQualitaAria rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/Motocicli
+:Motocicli rdf:type owl:Class ;
+           rdfs:subClassOf :Circolazione .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/Motrici
+:Motrici rdf:type owl:Class ;
+         rdfs:subClassOf :Circolazione .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/Popolazione
+:Popolazione rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/StazioneMeteorologica
+:StazioneMeteorologica rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/ontology#Inquinanti
+:Inquinanti rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/ontology#coordinate
+:coordinate rdf:type owl:Class .
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+   owl:members ( :Autobus
+                 :Autovetture
+                 :Industriali
+                 :Motocicli
+                 :Motrici
+               )
+ ] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Euro0
+                :Euro1
+                :Euro2
+                :Euro3
+                :Euro4
+                :Euro5
+                :Euro6
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
