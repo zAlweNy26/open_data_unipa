@@ -1,7 +1,0 @@
-Tier;Date;CO;HC[a];NOx;NH3[b];PM;N2O;CH4;HCHO;Smoke
-Euro 1;1992;4.5;1.1;8.0;NaN;0.612;NaN;NaN;NaN;NaN
-Euro 2;1995;1.1;7.0;NaN;0.25;NaN;NaN;NaN;NaN;NaN
-Euro 3;1999;1.5;0.25;2.0;NaN;0.02;NaN;NaN;NaN;0.15
-Euro 4;2005;0.46;3.5;NaN;0.02;NaN;NaN;NaN;0.5;NaN
-Euro 5;2008;0.46;2.0;NaN;0.02;NaN;NaN;NaN;0.5;NaN
-Euro 6;2012;1.5;0.13;0.4;10;0.01;NaN;NaN;NaN;NaN
