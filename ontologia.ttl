@@ -62,6 +62,20 @@
                                                                     rdfs:range <http://www.semanticweb.org/aria-ontology-cb-dn/Inquinanti> .
 
 
+###  http://www.semanticweb.org/aria-ontology-cb-dn/ontology#haDensitàPopolazione
+:haDensitàPopolazione rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf owl:topObjectProperty ;
+                      rdfs:domain <http://www.semanticweb.org/aria-ontology-cb-dn/AreaVerde> ;
+                      rdfs:range <http://www.semanticweb.org/aria-ontology-cb-dn/Popolazione> .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/ontology#haRicoveri
+:haRicoveri rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain <http://www.semanticweb.org/aria-ontology-cb-dn/Comune> ;
+            rdfs:range <http://www.semanticweb.org/aria-ontology-cb-dn/Popolazione> .
+
+
 #################################################################
 #    Data properties
 #################################################################
