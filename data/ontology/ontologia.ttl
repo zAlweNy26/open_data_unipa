@@ -1,111 +1,247 @@
-@prefix : <http://www.semanticweb.org/aria-ontology-cb-dn/> .
+@prefix : <http://www.semanticweb.org/owl/owlapi/turtle#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
-
-@base <http://www.semanticweb.org/aria-ontology-cb-dn/> .
-
-# Ontologia di base
+@base <http://www.semanticweb.org/owl/owlapi/turtle#> .
 
 <http://www.semanticweb.org/aria-ontology-cb-dn/ontology> rdf:type owl:Ontology .
 
-# Classi
+#################################################################
+#    Object Properties
+#################################################################
 
-:Comune rdf:type owl:Class .
-:Popolazione rdf:type owl:Class .
-:AreaVerde rdf:type owl:Class .
-:StazioneMeteorologica rdf:type owl:Class .
-:MisurazioneQualitaAria rdf:type owl:Class .
-:Veicolo rdf:type owl:Class .
-:ClasseInquinamento rdf:type owl:Class .
+###  http://www.semanticweb.org/aria-ontology-cb-dn/haAreaVerde
+<http://www.semanticweb.org/aria-ontology-cb-dn/haAreaVerde> rdf:type owl:ObjectProperty ;
+                                                             rdfs:subPropertyOf owl:topObjectProperty ;
+                                                             rdfs:domain <http://www.semanticweb.org/aria-ontology-cb-dn/Comune> ;
+                                                             rdfs:range <http://www.semanticweb.org/aria-ontology-cb-dn/AreaVerde> .
 
-# Sottoclassi
 
-:Motocicli rdf:type owl:Class ;
-           rdfs:subClassOf owl:Veicolo .
+###  http://www.semanticweb.org/aria-ontology-cb-dn/haCoordinate
+<http://www.semanticweb.org/aria-ontology-cb-dn/haCoordinate> rdf:type owl:ObjectProperty ;
+                                                              rdfs:subPropertyOf owl:topObjectProperty ;
+                                                              rdfs:domain <http://www.semanticweb.org/aria-ontology-cb-dn/AreaVerde> ,
+                                                                          <http://www.semanticweb.org/aria-ontology-cb-dn/StazioneMeteorologica> ;
+                                                              rdfs:range <http://www.semanticweb.org/aria-ontology-cb-dn/Coordinate> .
 
-:Autovetture rdf:type owl:Class ;
-             rdfs:subClassOf owl:Veicolo .
 
-:Autobus rdf:type owl:Class ;
-         rdfs:subClassOf owl:Veicolo .
+###  http://www.semanticweb.org/aria-ontology-cb-dn/haInquinante
+<http://www.semanticweb.org/aria-ontology-cb-dn/haInquinante> rdf:type owl:ObjectProperty ;
+                                                              rdfs:subPropertyOf owl:topObjectProperty ;
+                                                              rdfs:domain <http://www.semanticweb.org/aria-ontology-cb-dn/StazioneMeteorologica> ;
+                                                              rdfs:range <http://www.semanticweb.org/aria-ontology-cb-dn/Inquinanti> .
 
-:Motrici rdf:type owl:Class ;
-         rdfs:subClassOf owl:Veicolo .
 
-:Industriali rdf:type owl:Class ;
-             rdfs:subClassOf owl:Veicolo .
+###  http://www.semanticweb.org/aria-ontology-cb-dn/haMisuraQualitàAria
+<http://www.semanticweb.org/aria-ontology-cb-dn/haMisuraQualitàAria> rdf:type owl:ObjectProperty ;
+                                                                     rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                     rdfs:domain <http://www.semanticweb.org/aria-ontology-cb-dn/StazioneMeteorologica> ;
+                                                                     rdfs:range <http://www.semanticweb.org/aria-ontology-cb-dn/MisurazioneQualitaAria> .
 
-:Euro0 rdf:type owl:Class ;
-       rdfs:label "Classe Inquinamento Euro 0" ;
-       rdfs:subClassOf owl:ClasseInquinamento .
 
-:Euro1 rdf:type owl:Class ;
-       rdfs:label "Classe Inquinamento Euro 1" ;
-       rdfs:subClassOf owl:ClasseInquinamento .
+###  http://www.semanticweb.org/aria-ontology-cb-dn/haPopolazione
+<http://www.semanticweb.org/aria-ontology-cb-dn/haPopolazione> rdf:type owl:ObjectProperty ;
+                                                               rdfs:subPropertyOf owl:topObjectProperty ;
+                                                               rdfs:domain <http://www.semanticweb.org/aria-ontology-cb-dn/Comune> ;
+                                                               rdfs:range <http://www.semanticweb.org/aria-ontology-cb-dn/Popolazione> .
 
-:Euro2 rdf:type owl:Class ;
-       rdfs:label "Classe Inquinamento Euro 2" ;
-       rdfs:subClassOf owl:ClasseInquinamento .
 
-:Euro3 rdf:type owl:Class ;
-       rdfs:label "Classe Inquinamento Euro 3" ;
-       rdfs:subClassOf owl:ClasseInquinamento .
+###  http://www.semanticweb.org/aria-ontology-cb-dn/haStazioneMeteorologica
+<http://www.semanticweb.org/aria-ontology-cb-dn/haStazioneMeteorologica> rdf:type owl:ObjectProperty ;
+                                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                         rdfs:domain <http://www.semanticweb.org/aria-ontology-cb-dn/Comune> ;
+                                                                         rdfs:range <http://www.semanticweb.org/aria-ontology-cb-dn/StazioneMeteorologica> .
 
-:Euro4 rdf:type owl:Class ;
-       rdfs:label "Classe Inquinamento Euro 4" ;
-       rdfs:subClassOf owl:ClasseInquinamento .
 
-:Euro5 rdf:type owl:Class ;
-       rdfs:label "Classe Inquinamento Euro 5" ;
-       rdfs:subClassOf owl:ClasseInquinamento .
+###  http://www.semanticweb.org/aria-ontology-cb-dn/monitoraInquinante
+<http://www.semanticweb.org/aria-ontology-cb-dn/monitoraInquinante> rdf:type owl:ObjectProperty ;
+                                                                    rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                    rdfs:domain <http://www.semanticweb.org/aria-ontology-cb-dn/StazioneMeteorologica> ;
+                                                                    rdfs:range <http://www.semanticweb.org/aria-ontology-cb-dn/Inquinanti> .
 
-:Euro6 rdf:type owl:Class ;
-       rdfs:label "Classe Inquinamento Euro 6" ;
-       rdfs:subClassOf owl:ClasseInquinamento .
 
-# Proprietà
+#################################################################
+#    Data properties
+#################################################################
 
-:haRicoveri rdf:type owl:DatatypeProperty ;
-            rdfs:domain :Popolazione ;
-            rdfs:range xsd:integer .
+###  http://www.semanticweb.org/aria-ontology-cb-dn/C6H6
+<http://www.semanticweb.org/aria-ontology-cb-dn/C6H6> rdf:type owl:DatatypeProperty ;
+                                                      rdfs:subPropertyOf owl:topDataProperty ;
+                                                      rdfs:domain <http://www.semanticweb.org/aria-ontology-cb-dn/Inquinanti> ;
+                                                      rdfs:range xsd:float .
 
-:haPopolazione rdf:type owl:ObjectProperty ;
-               rdfs:domain :AreaVerde ;
-               rdfs:range :Popolazione .
 
-:haAreaVerde rdf:type owl:ObjectProperty ;
-             rdfs:domain :Comune ;
-             rdfs:range :AreaVerde .
+###  http://www.semanticweb.org/aria-ontology-cb-dn/CO_8h
+<http://www.semanticweb.org/aria-ontology-cb-dn/CO_8h> rdf:type owl:DatatypeProperty ;
+                                                       rdfs:subPropertyOf owl:topDataProperty ;
+                                                       rdfs:domain <http://www.semanticweb.org/aria-ontology-cb-dn/Inquinanti> ;
+                                                       rdfs:range xsd:float .
 
-:haStazioneMeteorologica rdf:type owl:ObjectProperty ;
-                         rdfs:domain :Comune ;
-                         rdfs:range :StazioneMeteorologica .
 
-:localizzataIn rdf:type owl:ObjectProperty ;
-               rdfs:domain :StazioneMeteorologica ;
-               rdfs:range :AreaVerde .
+###  http://www.semanticweb.org/aria-ontology-cb-dn/NO2
+<http://www.semanticweb.org/aria-ontology-cb-dn/NO2> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:subPropertyOf owl:topDataProperty ;
+                                                     rdfs:domain <http://www.semanticweb.org/aria-ontology-cb-dn/Inquinanti> ;
+                                                     rdfs:range xsd:float .
 
-:monitoraInquinante rdf:type owl:DatatypeProperty ;
-                    rdfs:domain :StazioneMeteorologica ;
-                    rdfs:range xsd:string .
 
-:haQualitaAria rdf:type owl:ObjectProperty ;
-               rdfs:domain :AreaVerde ;
-               rdfs:range :MisurazioneQualitaAria .
+###  http://www.semanticweb.org/aria-ontology-cb-dn/O3
+<http://www.semanticweb.org/aria-ontology-cb-dn/O3> rdf:type owl:DatatypeProperty ;
+                                                    rdfs:subPropertyOf owl:topDataProperty ;
+                                                    rdfs:domain <http://www.semanticweb.org/aria-ontology-cb-dn/Inquinanti> ;
+                                                    rdfs:range xsd:float .
 
-:haDensitaPopolazione rdf:type owl:DatatypeProperty ;
-                      rdfs:domain :AreaVerde ;
-                      rdfs:range xsd:integer .
 
-# Proprietà Geografiche
-:latitudine rdf:type owl:DatatypeProperty ;
-            rdfs:domain [:StazioneMeteorologica :AreaVerde] ;
-            rdfs:range xsd:float .
+###  http://www.semanticweb.org/aria-ontology-cb-dn/PM10
+<http://www.semanticweb.org/aria-ontology-cb-dn/PM10> rdf:type owl:DatatypeProperty ;
+                                                      rdfs:subPropertyOf owl:topDataProperty ;
+                                                      rdfs:domain <http://www.semanticweb.org/aria-ontology-cb-dn/Inquinanti> ;
+                                                      rdfs:range xsd:float .
 
-:longitudine rdf:type owl:DatatypeProperty ;
-             rdfs:domain [:StazioneMeteorologica :AreaVerde] ;
-             rdfs:range xsd:float .
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/PM25
+<http://www.semanticweb.org/aria-ontology-cb-dn/PM25> rdf:type owl:DatatypeProperty ;
+                                                      rdfs:subPropertyOf owl:topDataProperty ;
+                                                      rdfs:domain <http://www.semanticweb.org/aria-ontology-cb-dn/Inquinanti> ;
+                                                      rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/SO2
+<http://www.semanticweb.org/aria-ontology-cb-dn/SO2> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:subPropertyOf owl:topDataProperty ;
+                                                     rdfs:domain <http://www.semanticweb.org/aria-ontology-cb-dn/Inquinanti> ;
+                                                     rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/latitudine
+<http://www.semanticweb.org/aria-ontology-cb-dn/latitudine> rdf:type owl:DatatypeProperty ;
+                                                            rdfs:subPropertyOf owl:topDataProperty ;
+                                                            rdfs:domain <http://www.semanticweb.org/aria-ontology-cb-dn/Coordinate> ;
+                                                            rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/longitudine
+<http://www.semanticweb.org/aria-ontology-cb-dn/longitudine> rdf:type owl:DatatypeProperty ;
+                                                             rdfs:subPropertyOf owl:topDataProperty ;
+                                                             rdfs:domain <http://www.semanticweb.org/aria-ontology-cb-dn/Coordinate> ;
+                                                             rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/percentualeRicoveri
+<http://www.semanticweb.org/aria-ontology-cb-dn/percentualeRicoveri> rdf:type owl:DatatypeProperty ;
+                                                                     rdfs:subPropertyOf owl:topDataProperty ;
+                                                                     rdfs:domain <http://www.semanticweb.org/aria-ontology-cb-dn/Popolazione> ;
+                                                                     rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/popolazioneTotale
+<http://www.semanticweb.org/aria-ontology-cb-dn/popolazioneTotale> rdf:type owl:DatatypeProperty ;
+                                                                   rdfs:subPropertyOf owl:topDataProperty ;
+                                                                   rdfs:domain <http://www.semanticweb.org/aria-ontology-cb-dn/Popolazione> ;
+                                                                   rdfs:range xsd:integer .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/AreaVerde
+<http://www.semanticweb.org/aria-ontology-cb-dn/AreaVerde> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/Comune
+<http://www.semanticweb.org/aria-ontology-cb-dn/Comune> rdf:type owl:Class ;
+                                                        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://www.semanticweb.org/aria-ontology-cb-dn/haAreaVerde> ;
+                                                                          owl:someValuesFrom <http://www.semanticweb.org/aria-ontology-cb-dn/AreaVerde>
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://www.semanticweb.org/aria-ontology-cb-dn/haPopolazione> ;
+                                                                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                          owl:onClass <http://www.semanticweb.org/aria-ontology-cb-dn/Popolazione>
+                                                                        ] .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/Coordinate
+<http://www.semanticweb.org/aria-ontology-cb-dn/Coordinate> rdf:type owl:Class ;
+                                                            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://www.semanticweb.org/aria-ontology-cb-dn/latitudine> ;
+                                                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                              owl:onDataRange owl:rational
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://www.semanticweb.org/aria-ontology-cb-dn/longitudine> ;
+                                                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                              owl:onDataRange owl:rational
+                                                                            ] .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/Inquinanti
+<http://www.semanticweb.org/aria-ontology-cb-dn/Inquinanti> rdf:type owl:Class ;
+                                                            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://www.semanticweb.org/aria-ontology-cb-dn/C6H6> ;
+                                                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                              owl:onDataRange owl:rational
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://www.semanticweb.org/aria-ontology-cb-dn/CO_8h> ;
+                                                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                              owl:onDataRange owl:rational
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://www.semanticweb.org/aria-ontology-cb-dn/NO2> ;
+                                                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                              owl:onDataRange owl:rational
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://www.semanticweb.org/aria-ontology-cb-dn/O3> ;
+                                                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                              owl:onDataRange owl:rational
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://www.semanticweb.org/aria-ontology-cb-dn/PM10> ;
+                                                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                              owl:onDataRange owl:rational
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://www.semanticweb.org/aria-ontology-cb-dn/PM25> ;
+                                                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                              owl:onDataRange owl:rational
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://www.semanticweb.org/aria-ontology-cb-dn/SO2> ;
+                                                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                              owl:onDataRange owl:rational
+                                                                            ] .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/MisurazioneQualitaAria
+<http://www.semanticweb.org/aria-ontology-cb-dn/MisurazioneQualitaAria> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/Popolazione
+<http://www.semanticweb.org/aria-ontology-cb-dn/Popolazione> rdf:type owl:Class ;
+                                                             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <http://www.semanticweb.org/aria-ontology-cb-dn/percentualeRicoveri> ;
+                                                                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                               owl:onDataRange owl:rational
+                                                                             ] ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <http://www.semanticweb.org/aria-ontology-cb-dn/popolazioneTotale> ;
+                                                                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                               owl:onDataRange owl:rational
+                                                                             ] .
+
+
+###  http://www.semanticweb.org/aria-ontology-cb-dn/StazioneMeteorologica
+<http://www.semanticweb.org/aria-ontology-cb-dn/StazioneMeteorologica> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <http://www.semanticweb.org/aria-ontology-cb-dn/haCoordinate> ;
+                                                                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                         owl:onClass <http://www.semanticweb.org/aria-ontology-cb-dn/Coordinate>
+                                                                                       ] .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
