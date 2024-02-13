@@ -1,247 +1,3326 @@
-@prefix : <http://www.semanticweb.org/owl/owlapi/turtle#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.semanticweb.org/owl/owlapi/turtle#> .
+@prefix sso: <http://www.semanticweb.org/aria-ontology-cb-dn/ontology/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://www.semanticweb.org/aria-ontology-cb-dn/ontology> rdf:type owl:Ontology .
+<http://www.qualitaariamilano.it/resource/Milano> sso:haAreaVerde _:N5f23ae389eb147118aa18b73b102083d ;
+    sso:haPopolazione [ sso:anno "2015"^^xsd:gYear ;
+            sso:totalePopolazione 1339812 ],
+        [ sso:anno "2021"^^xsd:gYear ;
+            sso:totalePopolazione 1374582 ],
+        [ sso:anno "2018"^^xsd:gYear ;
+            sso:totalePopolazione 1380995 ],
+        [ sso:anno "2017"^^xsd:gYear ;
+            sso:totalePopolazione 1363683 ],
+        [ sso:anno "2019"^^xsd:gYear ;
+            sso:totalePopolazione 1395980 ],
+        [ sso:anno "2014"^^xsd:gYear ;
+            sso:totalePopolazione 1322892 ],
+        [ sso:anno "2020"^^xsd:gYear ;
+            sso:totalePopolazione 1406242 ],
+        [ sso:anno "2016"^^xsd:gYear ;
+            sso:totalePopolazione 1352193 ] ;
+    sso:haRicoveriApparatoRespiratorio [ sso:anno "2016"^^xsd:gYear ;
+            sso:totaleRicoveri 13407 ],
+        [ sso:anno "2014"^^xsd:gYear ;
+            sso:totaleRicoveri 13160 ],
+        [ sso:anno "2021"^^xsd:gYear ;
+            sso:totaleRicoveri 13131 ],
+        [ sso:anno "2017"^^xsd:gYear ;
+            sso:totaleRicoveri 14033 ],
+        [ sso:anno "2020"^^xsd:gYear ;
+            sso:totaleRicoveri 16636 ],
+        [ sso:anno "2015"^^xsd:gYear ;
+            sso:totaleRicoveri 13688 ],
+        [ sso:anno "2019"^^xsd:gYear ;
+            sso:totaleRicoveri 13721 ],
+        [ sso:anno "2018"^^xsd:gYear ;
+            sso:totaleRicoveri 13579 ] ;
+    sso:haStazioneMetereologica [ sso:idArpa 100 ;
+            sso:monitoraInquinante <http://www.qualitaariamilano.it/resource/C6H6>,
+                <http://www.qualitaariamilano.it/resource/NO2>,
+                <http://www.qualitaariamilano.it/resource/O3>,
+                <http://www.qualitaariamilano.it/resource/PM10>,
+                <http://www.qualitaariamilano.it/resource/PM25>,
+                <http://www.qualitaariamilano.it/resource/SO2> ;
+            owl:sameAs <http://www.qualitaariamilano.it/resource/stazioni/100> ],
+        [ sso:idArpa 2 ],
+        [ sso:idArpa 124 ;
+            sso:monitoraInquinante <http://www.qualitaariamilano.it/resource/NO2>,
+                <http://www.qualitaariamilano.it/resource/O3> ;
+            owl:sameAs <http://www.qualitaariamilano.it/resource/stazioni/124> ],
+        [ sso:idArpa 85 ],
+        _:N5f23ae389eb147118aa18b73b102083d,
+        [ sso:idArpa 7 ;
+            sso:monitoraInquinante <http://www.qualitaariamilano.it/resource/C6H6>,
+                <http://www.qualitaariamilano.it/resource/CO_8h>,
+                <http://www.qualitaariamilano.it/resource/NO2> ;
+            owl:sameAs <http://www.qualitaariamilano.it/resource/stazioni/7> ],
+        [ sso:idArpa 9 ],
+        [ sso:idArpa 100 ],
+        [ sso:idArpa 85 ;
+            sso:monitoraInquinante <http://www.qualitaariamilano.it/resource/CO_8h>,
+                <http://www.qualitaariamilano.it/resource/NO2>,
+                <http://www.qualitaariamilano.it/resource/O3>,
+                <http://www.qualitaariamilano.it/resource/PM10> ;
+            owl:sameAs <http://www.qualitaariamilano.it/resource/stazioni/85> ],
+        [ sso:idArpa 126 ;
+            sso:monitoraInquinante <http://www.qualitaariamilano.it/resource/NO2> ;
+            owl:sameAs <http://www.qualitaariamilano.it/resource/stazioni/126> ],
+        [ sso:idArpa 107 ],
+        [ sso:idArpa 7 ],
+        [ sso:idArpa 2 ;
+            sso:monitoraInquinante <http://www.qualitaariamilano.it/resource/C6H6>,
+                <http://www.qualitaariamilano.it/resource/CO_8h>,
+                <http://www.qualitaariamilano.it/resource/NO2>,
+                <http://www.qualitaariamilano.it/resource/PM10>,
+                <http://www.qualitaariamilano.it/resource/PM25> ;
+            owl:sameAs <http://www.qualitaariamilano.it/resource/stazioni/2> ],
+        [ sso:idArpa 126 ],
+        [ sso:idArpa 124 ],
+        [ sso:idArpa 125 ;
+            sso:monitoraInquinante <http://www.qualitaariamilano.it/resource/C6H6>,
+                <http://www.qualitaariamilano.it/resource/CO_8h>,
+                <http://www.qualitaariamilano.it/resource/NO2>,
+                <http://www.qualitaariamilano.it/resource/PM10>,
+                <http://www.qualitaariamilano.it/resource/PM25> ;
+            owl:sameAs <http://www.qualitaariamilano.it/resource/stazioni/125> ],
+        [ sso:idArpa 125 ],
+        [ sso:idArpa 107 ;
+            sso:monitoraInquinante <http://www.qualitaariamilano.it/resource/CO_8h>,
+                <http://www.qualitaariamilano.it/resource/NO2> ;
+            owl:sameAs <http://www.qualitaariamilano.it/resource/stazioni/107> ] .
 
-#################################################################
-#    Object Properties
-#################################################################
+<http://www.wikidata.org/entity/Q2025> a owl:Thing ;
+    rdfs:label "carbon monoxide" ;
+    sso:chemicalFormula "CO" ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/CO> .
 
-###  http://www.semanticweb.org/aria-ontology-cb-dn/haAreaVerde
-<http://www.semanticweb.org/aria-ontology-cb-dn/haAreaVerde> rdf:type owl:ObjectProperty ;
-                                                             rdfs:subPropertyOf owl:topObjectProperty ;
-                                                             rdfs:domain <http://www.semanticweb.org/aria-ontology-cb-dn/Comune> ;
-                                                             rdfs:range <http://www.semanticweb.org/aria-ontology-cb-dn/AreaVerde> .
+<http://www.wikidata.org/entity/Q207895> a owl:Thing ;
+    rdfs:label "nitrogen dioxide" ;
+    sso:chemicalFormula "NO2" ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/NO2> .
 
+<http://www.wikidata.org/entity/Q2270> a owl:Thing ;
+    rdfs:label "benzene" ;
+    sso:chemicalFormula "C6H6" ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/C6H6> .
 
-###  http://www.semanticweb.org/aria-ontology-cb-dn/haCoordinate
-<http://www.semanticweb.org/aria-ontology-cb-dn/haCoordinate> rdf:type owl:ObjectProperty ;
-                                                              rdfs:subPropertyOf owl:topObjectProperty ;
-                                                              rdfs:domain <http://www.semanticweb.org/aria-ontology-cb-dn/AreaVerde> ,
-                                                                          <http://www.semanticweb.org/aria-ontology-cb-dn/StazioneMeteorologica> ;
-                                                              rdfs:range <http://www.semanticweb.org/aria-ontology-cb-dn/Coordinate> .
+<http://www.wikidata.org/entity/Q36933> a owl:Thing ;
+    rdfs:label "ozone" ;
+    sso:chemicalFormula "O3" ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/O3> .
 
+<http://www.wikidata.org/entity/Q48035814> a owl:Thing ;
+    rdfs:label "PM10 (excluding PM 2.5)" ;
+    sso:chemicalFormula "PM10" ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/PM10> .
 
-###  http://www.semanticweb.org/aria-ontology-cb-dn/haInquinante
-<http://www.semanticweb.org/aria-ontology-cb-dn/haInquinante> rdf:type owl:ObjectProperty ;
-                                                              rdfs:subPropertyOf owl:topObjectProperty ;
-                                                              rdfs:domain <http://www.semanticweb.org/aria-ontology-cb-dn/StazioneMeteorologica> ;
-                                                              rdfs:range <http://www.semanticweb.org/aria-ontology-cb-dn/Inquinanti> .
+<http://www.wikidata.org/entity/Q5282> a owl:Thing ;
+    rdfs:label "PM 2.5" ;
+    sso:chemicalFormula "PM25" ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/PM25> .
 
+[] sso:idAv 691 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/691> .
 
-###  http://www.semanticweb.org/aria-ontology-cb-dn/haMisuraQualitàAria
-<http://www.semanticweb.org/aria-ontology-cb-dn/haMisuraQualitàAria> rdf:type owl:ObjectProperty ;
-                                                                     rdfs:subPropertyOf owl:topObjectProperty ;
-                                                                     rdfs:domain <http://www.semanticweb.org/aria-ontology-cb-dn/StazioneMeteorologica> ;
-                                                                     rdfs:range <http://www.semanticweb.org/aria-ontology-cb-dn/MisurazioneQualitaAria> .
+[] sso:idAv 239 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/239> .
 
+[] sso:idAv 488 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/488> .
 
-###  http://www.semanticweb.org/aria-ontology-cb-dn/haPopolazione
-<http://www.semanticweb.org/aria-ontology-cb-dn/haPopolazione> rdf:type owl:ObjectProperty ;
-                                                               rdfs:subPropertyOf owl:topObjectProperty ;
-                                                               rdfs:domain <http://www.semanticweb.org/aria-ontology-cb-dn/Comune> ;
-                                                               rdfs:range <http://www.semanticweb.org/aria-ontology-cb-dn/Popolazione> .
+[] sso:idAv 29 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/29> .
 
+[] sso:idAv 932 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/932> .
 
-###  http://www.semanticweb.org/aria-ontology-cb-dn/haStazioneMeteorologica
-<http://www.semanticweb.org/aria-ontology-cb-dn/haStazioneMeteorologica> rdf:type owl:ObjectProperty ;
-                                                                         rdfs:subPropertyOf owl:topObjectProperty ;
-                                                                         rdfs:domain <http://www.semanticweb.org/aria-ontology-cb-dn/Comune> ;
-                                                                         rdfs:range <http://www.semanticweb.org/aria-ontology-cb-dn/StazioneMeteorologica> .
+[] sso:idAv 324 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/324> .
 
+[] sso:idAv 898 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/898> .
 
-###  http://www.semanticweb.org/aria-ontology-cb-dn/monitoraInquinante
-<http://www.semanticweb.org/aria-ontology-cb-dn/monitoraInquinante> rdf:type owl:ObjectProperty ;
-                                                                    rdfs:subPropertyOf owl:topObjectProperty ;
-                                                                    rdfs:domain <http://www.semanticweb.org/aria-ontology-cb-dn/StazioneMeteorologica> ;
-                                                                    rdfs:range <http://www.semanticweb.org/aria-ontology-cb-dn/Inquinanti> .
+[] sso:idAv 212 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/212> .
 
+[] sso:idAv 834 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/834> .
 
-#################################################################
-#    Data properties
-#################################################################
+[] sso:idAv 164 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/164> .
 
-###  http://www.semanticweb.org/aria-ontology-cb-dn/C6H6
-<http://www.semanticweb.org/aria-ontology-cb-dn/C6H6> rdf:type owl:DatatypeProperty ;
-                                                      rdfs:subPropertyOf owl:topDataProperty ;
-                                                      rdfs:domain <http://www.semanticweb.org/aria-ontology-cb-dn/Inquinanti> ;
-                                                      rdfs:range xsd:float .
+[] sso:idAv 1000 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1000> .
 
+[] sso:idAv 972 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/972> .
 
-###  http://www.semanticweb.org/aria-ontology-cb-dn/CO_8h
-<http://www.semanticweb.org/aria-ontology-cb-dn/CO_8h> rdf:type owl:DatatypeProperty ;
-                                                       rdfs:subPropertyOf owl:topDataProperty ;
-                                                       rdfs:domain <http://www.semanticweb.org/aria-ontology-cb-dn/Inquinanti> ;
-                                                       rdfs:range xsd:float .
+[] sso:idAv 614 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/614> .
 
+[] sso:idAv 298 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/298> .
 
-###  http://www.semanticweb.org/aria-ontology-cb-dn/NO2
-<http://www.semanticweb.org/aria-ontology-cb-dn/NO2> rdf:type owl:DatatypeProperty ;
-                                                     rdfs:subPropertyOf owl:topDataProperty ;
-                                                     rdfs:domain <http://www.semanticweb.org/aria-ontology-cb-dn/Inquinanti> ;
-                                                     rdfs:range xsd:float .
+[] sso:idAv 352 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/352> .
 
+[] sso:idAv 483 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/483> .
 
-###  http://www.semanticweb.org/aria-ontology-cb-dn/O3
-<http://www.semanticweb.org/aria-ontology-cb-dn/O3> rdf:type owl:DatatypeProperty ;
-                                                    rdfs:subPropertyOf owl:topDataProperty ;
-                                                    rdfs:domain <http://www.semanticweb.org/aria-ontology-cb-dn/Inquinanti> ;
-                                                    rdfs:range xsd:float .
+[] sso:idAv 559 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/559> .
 
+[] sso:idAv 1023 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1023> .
 
-###  http://www.semanticweb.org/aria-ontology-cb-dn/PM10
-<http://www.semanticweb.org/aria-ontology-cb-dn/PM10> rdf:type owl:DatatypeProperty ;
-                                                      rdfs:subPropertyOf owl:topDataProperty ;
-                                                      rdfs:domain <http://www.semanticweb.org/aria-ontology-cb-dn/Inquinanti> ;
-                                                      rdfs:range xsd:float .
+[] sso:idAv 927 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/927> .
 
+[] sso:idAv 410 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/410> .
 
-###  http://www.semanticweb.org/aria-ontology-cb-dn/PM25
-<http://www.semanticweb.org/aria-ontology-cb-dn/PM25> rdf:type owl:DatatypeProperty ;
-                                                      rdfs:subPropertyOf owl:topDataProperty ;
-                                                      rdfs:domain <http://www.semanticweb.org/aria-ontology-cb-dn/Inquinanti> ;
-                                                      rdfs:range xsd:float .
+[] sso:idAv 1046 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1046> .
 
+[] sso:idAv 10 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/10> .
 
-###  http://www.semanticweb.org/aria-ontology-cb-dn/SO2
-<http://www.semanticweb.org/aria-ontology-cb-dn/SO2> rdf:type owl:DatatypeProperty ;
-                                                     rdfs:subPropertyOf owl:topDataProperty ;
-                                                     rdfs:domain <http://www.semanticweb.org/aria-ontology-cb-dn/Inquinanti> ;
-                                                     rdfs:range xsd:float .
+[] sso:idAv 203 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/203> .
 
+[] sso:idAv 39 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/39> .
 
-###  http://www.semanticweb.org/aria-ontology-cb-dn/latitudine
-<http://www.semanticweb.org/aria-ontology-cb-dn/latitudine> rdf:type owl:DatatypeProperty ;
-                                                            rdfs:subPropertyOf owl:topDataProperty ;
-                                                            rdfs:domain <http://www.semanticweb.org/aria-ontology-cb-dn/Coordinate> ;
-                                                            rdfs:range xsd:float .
+[] sso:idAv 103 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/103> .
 
+[] sso:idAv 616 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/616> .
 
-###  http://www.semanticweb.org/aria-ontology-cb-dn/longitudine
-<http://www.semanticweb.org/aria-ontology-cb-dn/longitudine> rdf:type owl:DatatypeProperty ;
-                                                             rdfs:subPropertyOf owl:topDataProperty ;
-                                                             rdfs:domain <http://www.semanticweb.org/aria-ontology-cb-dn/Coordinate> ;
-                                                             rdfs:range xsd:float .
+[] sso:idAv 941 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/941> .
 
+[] sso:idAv 861 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/861> .
 
-###  http://www.semanticweb.org/aria-ontology-cb-dn/percentualeRicoveri
-<http://www.semanticweb.org/aria-ontology-cb-dn/percentualeRicoveri> rdf:type owl:DatatypeProperty ;
-                                                                     rdfs:subPropertyOf owl:topDataProperty ;
-                                                                     rdfs:domain <http://www.semanticweb.org/aria-ontology-cb-dn/Popolazione> ;
-                                                                     rdfs:range xsd:integer .
+[] sso:idAv 289 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/289> .
 
+[] sso:idAv 952 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/952> .
 
-###  http://www.semanticweb.org/aria-ontology-cb-dn/popolazioneTotale
-<http://www.semanticweb.org/aria-ontology-cb-dn/popolazioneTotale> rdf:type owl:DatatypeProperty ;
-                                                                   rdfs:subPropertyOf owl:topDataProperty ;
-                                                                   rdfs:domain <http://www.semanticweb.org/aria-ontology-cb-dn/Popolazione> ;
-                                                                   rdfs:range xsd:integer .
+[] sso:idAv 379 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/379> .
 
+[] sso:idAv 454 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/454> .
 
-#################################################################
-#    Classes
-#################################################################
+[] sso:idAv 971 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/971> .
 
-###  http://www.semanticweb.org/aria-ontology-cb-dn/AreaVerde
-<http://www.semanticweb.org/aria-ontology-cb-dn/AreaVerde> rdf:type owl:Class .
+[] sso:idAv 885 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/885> .
 
+[] sso:idAv 929 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/929> .
 
-###  http://www.semanticweb.org/aria-ontology-cb-dn/Comune
-<http://www.semanticweb.org/aria-ontology-cb-dn/Comune> rdf:type owl:Class ;
-                                                        rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty <http://www.semanticweb.org/aria-ontology-cb-dn/haAreaVerde> ;
-                                                                          owl:someValuesFrom <http://www.semanticweb.org/aria-ontology-cb-dn/AreaVerde>
-                                                                        ] ,
-                                                                        [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty <http://www.semanticweb.org/aria-ontology-cb-dn/haPopolazione> ;
-                                                                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                          owl:onClass <http://www.semanticweb.org/aria-ontology-cb-dn/Popolazione>
-                                                                        ] .
+[] sso:idAv 308 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/308> .
 
+[] sso:idAv 600 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/600> .
 
-###  http://www.semanticweb.org/aria-ontology-cb-dn/Coordinate
-<http://www.semanticweb.org/aria-ontology-cb-dn/Coordinate> rdf:type owl:Class ;
-                                                            rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                              owl:onProperty <http://www.semanticweb.org/aria-ontology-cb-dn/latitudine> ;
-                                                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                              owl:onDataRange owl:rational
-                                                                            ] ,
-                                                                            [ rdf:type owl:Restriction ;
-                                                                              owl:onProperty <http://www.semanticweb.org/aria-ontology-cb-dn/longitudine> ;
-                                                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                              owl:onDataRange owl:rational
-                                                                            ] .
+[] sso:idAv 866 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/866> .
 
+[] sso:idAv 839 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/839> .
 
-###  http://www.semanticweb.org/aria-ontology-cb-dn/Inquinanti
-<http://www.semanticweb.org/aria-ontology-cb-dn/Inquinanti> rdf:type owl:Class ;
-                                                            rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                              owl:onProperty <http://www.semanticweb.org/aria-ontology-cb-dn/C6H6> ;
-                                                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                              owl:onDataRange owl:rational
-                                                                            ] ,
-                                                                            [ rdf:type owl:Restriction ;
-                                                                              owl:onProperty <http://www.semanticweb.org/aria-ontology-cb-dn/CO_8h> ;
-                                                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                              owl:onDataRange owl:rational
-                                                                            ] ,
-                                                                            [ rdf:type owl:Restriction ;
-                                                                              owl:onProperty <http://www.semanticweb.org/aria-ontology-cb-dn/NO2> ;
-                                                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                              owl:onDataRange owl:rational
-                                                                            ] ,
-                                                                            [ rdf:type owl:Restriction ;
-                                                                              owl:onProperty <http://www.semanticweb.org/aria-ontology-cb-dn/O3> ;
-                                                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                              owl:onDataRange owl:rational
-                                                                            ] ,
-                                                                            [ rdf:type owl:Restriction ;
-                                                                              owl:onProperty <http://www.semanticweb.org/aria-ontology-cb-dn/PM10> ;
-                                                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                              owl:onDataRange owl:rational
-                                                                            ] ,
-                                                                            [ rdf:type owl:Restriction ;
-                                                                              owl:onProperty <http://www.semanticweb.org/aria-ontology-cb-dn/PM25> ;
-                                                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                              owl:onDataRange owl:rational
-                                                                            ] ,
-                                                                            [ rdf:type owl:Restriction ;
-                                                                              owl:onProperty <http://www.semanticweb.org/aria-ontology-cb-dn/SO2> ;
-                                                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                              owl:onDataRange owl:rational
-                                                                            ] .
+[] sso:idAv 694 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/694> .
 
+[] sso:idAv 835 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/835> .
 
-###  http://www.semanticweb.org/aria-ontology-cb-dn/MisurazioneQualitaAria
-<http://www.semanticweb.org/aria-ontology-cb-dn/MisurazioneQualitaAria> rdf:type owl:Class .
+[] sso:idAv 74 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/74> .
 
+[] sso:idAv 287 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/287> .
 
-###  http://www.semanticweb.org/aria-ontology-cb-dn/Popolazione
-<http://www.semanticweb.org/aria-ontology-cb-dn/Popolazione> rdf:type owl:Class ;
-                                                             rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                               owl:onProperty <http://www.semanticweb.org/aria-ontology-cb-dn/percentualeRicoveri> ;
-                                                                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                               owl:onDataRange owl:rational
-                                                                             ] ,
-                                                                             [ rdf:type owl:Restriction ;
-                                                                               owl:onProperty <http://www.semanticweb.org/aria-ontology-cb-dn/popolazioneTotale> ;
-                                                                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                               owl:onDataRange owl:rational
-                                                                             ] .
+[] sso:idAv 573 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/573> .
 
+[] sso:idAv 141 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/141> .
 
-###  http://www.semanticweb.org/aria-ontology-cb-dn/StazioneMeteorologica
-<http://www.semanticweb.org/aria-ontology-cb-dn/StazioneMeteorologica> rdf:type owl:Class ;
-                                                                       rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                                         owl:onProperty <http://www.semanticweb.org/aria-ontology-cb-dn/haCoordinate> ;
-                                                                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                                                         owl:onClass <http://www.semanticweb.org/aria-ontology-cb-dn/Coordinate>
-                                                                                       ] .
+[] sso:idAv 939 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/939> .
 
+[] sso:idAv 692 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/692> .
 
-###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
+[] sso:idAv 78 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/78> .
+
+[] sso:idAv 184 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/184> .
+
+[] sso:idAv 539 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/539> .
+
+[] sso:idAv 951 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/951> .
+
+[] sso:idAv 487 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/487> .
+
+[] sso:idAv 443 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/443> .
+
+[] sso:idAv 490 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/490> .
+
+[] sso:idAv 525 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/525> .
+
+[] sso:idAv 106 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/106> .
+
+[] sso:idAv 403 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/403> .
+
+[] sso:idAv 361 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/361> .
+
+[] sso:idAv 520 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/520> .
+
+[] sso:idAv 826 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/826> .
+
+[] sso:idAv 70 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/70> .
+
+[] sso:idAv 267 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/267> .
+
+[] sso:idAv 575 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/575> .
+
+[] sso:idAv 766 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/766> .
+
+[] sso:idAv 155 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/155> .
+
+[] sso:idAv 899 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/899> .
+
+[] sso:idAv 447 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/447> .
+
+[] sso:idAv 99 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/99> .
+
+[] sso:idAv 196 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/196> .
+
+[] sso:idAv 872 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/872> .
+
+[] sso:idAv 202 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/202> .
+
+[] sso:idAv 533 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/533> .
+
+[] sso:idAv 667 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/667> .
+
+[] sso:idAv 860 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/860> .
+
+[] sso:idAv 5 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/5> .
+
+[] sso:idAv 223 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/223> .
+
+[] sso:idAv 263 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/263> .
+
+[] sso:idAv 272 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/272> .
+
+[] sso:idAv 256 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/256> .
+
+[] sso:idAv 760 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/760> .
+
+[] sso:idAv 416 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/416> .
+
+[] sso:idAv 921 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/921> .
+
+[] sso:idAv 145 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/145> .
+
+[] sso:idAv 880 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/880> .
+
+[] sso:idAv 669 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/669> .
+
+[] sso:idAv 189 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/189> .
+
+[] sso:idAv 135 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/135> .
+
+[] sso:idAv 936 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/936> .
+
+[] sso:idAv 666 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/666> .
+
+[] sso:idAv 721 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/721> .
+
+[] sso:idAv 396 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/396> .
+
+[] sso:idAv 340 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/340> .
+
+[] sso:idAv 62 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/62> .
+
+[] sso:idAv 497 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/497> .
+
+[] sso:idAv 55 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/55> .
+
+[] sso:idAv 817 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/817> .
+
+[] sso:idAv 879 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/879> .
+
+[] sso:idAv 85 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/85> .
+
+[] sso:idAv 617 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/617> .
+
+[] sso:idAv 18 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/18> .
+
+[] sso:idAv 955 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/955> .
+
+[] sso:idAv 337 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/337> .
+
+[] sso:idAv 318 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/318> .
+
+[] sso:idAv 886 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/886> .
+
+[] sso:idAv 56 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/56> .
+
+[] sso:idAv 12 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/12> .
+
+[] sso:idAv 420 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/420> .
+
+[] sso:idAv 406 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/406> .
+
+[] sso:idAv 592 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/592> .
+
+[] sso:idAv 634 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/634> .
+
+[] sso:idAv 1013 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1013> .
+
+[] sso:idAv 238 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/238> .
+
+[] sso:idAv 294 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/294> .
+
+[] sso:idAv 505 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/505> .
+
+[] sso:idAv 73 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/73> .
+
+[] sso:idAv 679 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/679> .
+
+[] sso:idAv 893 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/893> .
+
+[] sso:idAv 780 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/780> .
+
+[] sso:idAv 1049 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1049> .
+
+[] sso:idAv 372 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/372> .
+
+[] sso:idAv 905 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/905> .
+
+[] sso:idAv 907 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/907> .
+
+[] sso:idAv 1016 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1016> .
+
+[] sso:idAv 82 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/82> .
+
+[] sso:idAv 748 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/748> .
+
+[] sso:idAv 404 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/404> .
+
+[] sso:idAv 887 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/887> .
+
+[] sso:idAv 1060 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1060> .
+
+[] sso:idAv 7 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/7> .
+
+[] sso:idAv 33 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/33> .
+
+[] sso:idAv 316 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/316> .
+
+[] sso:idAv 715 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/715> .
+
+[] sso:idAv 261 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/261> .
+
+[] sso:idAv 530 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/530> .
+
+[] sso:idAv 362 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/362> .
+
+[] sso:idAv 725 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/725> .
+
+[] sso:idAv 398 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/398> .
+
+[] sso:idAv 714 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/714> .
+
+[] sso:idAv 695 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/695> .
+
+[] sso:idAv 1035 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1035> .
+
+[] sso:idAv 720 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/720> .
+
+[] sso:idAv 975 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/975> .
+
+[] sso:idAv 266 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/266> .
+
+[] sso:idAv 388 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/388> .
+
+[] sso:idAv 296 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/296> .
+
+[] sso:idAv 904 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/904> .
+
+[] sso:idAv 591 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/591> .
+
+[] sso:idAv 1009 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1009> .
+
+[] sso:idAv 784 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/784> .
+
+[] sso:idAv 943 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/943> .
+
+[] sso:idAv 874 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/874> .
+
+[] sso:idAv 149 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/149> .
+
+[] sso:idAv 881 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/881> .
+
+[] sso:idAv 453 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/453> .
+
+[] sso:idAv 258 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/258> .
+
+[] sso:idAv 322 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/322> .
+
+[] sso:idAv 137 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/137> .
+
+[] sso:idAv 1038 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1038> .
+
+[] sso:idAv 548 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/548> .
+
+[] sso:idAv 229 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/229> .
+
+[] sso:idAv 390 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/390> .
+
+[] sso:idAv 97 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/97> .
+
+[] sso:idAv 216 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/216> .
+
+[] sso:idAv 484 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/484> .
+
+[] sso:idAv 332 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/332> .
+
+[] sso:idAv 479 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/479> .
+
+[] sso:idAv 100 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/100> .
+
+[] sso:idAv 22 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/22> .
+
+[] sso:idAv 566 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/566> .
+
+[] sso:idAv 828 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/828> .
+
+[] sso:idAv 88 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/88> .
+
+[] sso:idAv 601 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/601> .
+
+[] sso:idAv 829 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/829> .
+
+[] sso:idAv 763 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/763> .
+
+[] sso:idAv 732 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/732> .
+
+[] sso:idAv 230 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/230> .
+
+[] sso:idAv 761 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/761> .
+
+[] sso:idAv 268 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/268> .
+
+[] sso:idAv 596 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/596> .
+
+[] sso:idAv 157 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/157> .
+
+[] sso:idAv 606 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/606> .
+
+[] sso:idAv 788 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/788> .
+
+[] sso:idAv 466 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/466> .
+
+[] sso:idAv 342 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/342> .
+
+[] sso:idAv 351 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/351> .
+
+[] sso:idAv 630 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/630> .
+
+[] sso:idAv 151 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/151> .
+
+[] sso:idAv 589 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/589> .
+
+[] sso:idAv 359 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/359> .
+
+[] sso:idAv 232 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/232> .
+
+[] sso:idAv 441 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/441> .
+
+[] sso:idAv 832 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/832> .
+
+[] sso:idAv 873 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/873> .
+
+[] sso:idAv 670 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/670> .
+
+[] sso:idAv 108 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/108> .
+
+[] sso:idAv 716 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/716> .
+
+[] sso:idAv 906 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/906> .
+
+[] sso:idAv 877 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/877> .
+
+[] sso:idAv 662 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/662> .
+
+[] sso:idAv 674 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/674> .
+
+[] sso:idAv 1052 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1052> .
+
+[] sso:idAv 241 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/241> .
+
+[] sso:idAv 916 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/916> .
+
+[] sso:idAv 411 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/411> .
+
+[] sso:idAv 693 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/693> .
+
+[] sso:idAv 564 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/564> .
+
+[] sso:idAv 206 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/206> .
+
+[] sso:idAv 871 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/871> .
+
+[] sso:idAv 572 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/572> .
+
+[] sso:idAv 908 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/908> .
+
+[] sso:idAv 631 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/631> .
+
+[] sso:idAv 432 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/432> .
+
+[] sso:idAv 226 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/226> .
+
+[] sso:idAv 234 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/234> .
+
+[] sso:idAv 19 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/19> .
+
+[] sso:idAv 279 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/279> .
+
+[] sso:idAv 759 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/759> .
+
+[] sso:idAv 981 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/981> .
+
+[] sso:idAv 755 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/755> .
+
+[] sso:idAv 717 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/717> .
+
+[] sso:idAv 768 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/768> .
+
+[] sso:idAv 944 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/944> .
+
+[] sso:idAv 23 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/23> .
+
+[] sso:idAv 1042 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1042> .
+
+[] sso:idAv 297 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/297> .
+
+[] sso:idAv 581 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/581> .
+
+[] sso:idAv 777 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/777> .
+
+[] sso:idAv 727 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/727> .
+
+[] sso:idAv 76 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/76> .
+
+[] sso:idAv 1039 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1039> .
+
+[] sso:idAv 977 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/977> .
+
+[] sso:idAv 767 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/767> .
+
+[] sso:idAv 990 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/990> .
+
+[] sso:idAv 245 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/245> .
+
+[] sso:idAv 1002 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1002> .
+
+[] sso:idAv 558 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/558> .
+
+[] sso:idAv 517 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/517> .
+
+[] sso:idAv 736 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/736> .
+
+[] sso:idAv 477 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/477> .
+
+[] sso:idAv 649 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/649> .
+
+[] sso:idAv 395 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/395> .
+
+[] sso:idAv 825 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/825> .
+
+[] sso:idAv 622 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/622> .
+
+[] sso:idAv 64 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/64> .
+
+[] sso:idAv 677 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/677> .
+
+[] sso:idAv 31 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/31> .
+
+[] sso:idAv 901 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/901> .
+
+[] sso:idAv 915 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/915> .
+
+[] sso:idAv 686 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/686> .
+
+[] sso:idAv 437 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/437> .
+
+[] sso:idAv 707 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/707> .
+
+[] sso:idAv 208 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/208> .
+
+[] sso:idAv 711 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/711> .
+
+[] sso:idAv 1057 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1057> .
+
+[] sso:idAv 179 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/179> .
+
+[] sso:idAv 849 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/849> .
+
+[] sso:idAv 210 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/210> .
+
+[] sso:idAv 774 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/774> .
+
+[] sso:idAv 162 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/162> .
+
+[] sso:idAv 217 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/217> .
+
+[] sso:idAv 708 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/708> .
+
+[] sso:idAv 892 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/892> .
+
+[] sso:idAv 225 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/225> .
+
+[] sso:idAv 580 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/580> .
+
+[] sso:idAv 48 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/48> .
+
+[] sso:idAv 541 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/541> .
+
+[] sso:idAv 125 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/125> .
+
+[] sso:idAv 159 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/159> .
+
+[] sso:idAv 188 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/188> .
+
+[] sso:idAv 93 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/93> .
+
+[] sso:idAv 570 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/570> .
+
+[] sso:idAv 678 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/678> .
+
+[] sso:idAv 45 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/45> .
+
+[] sso:idAv 928 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/928> .
+
+[] sso:idAv 120 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/120> .
+
+[] sso:idAv 79 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/79> .
+
+[] sso:idAv 478 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/478> .
+
+[] sso:idAv 474 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/474> .
+
+[] sso:idAv 847 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/847> .
+
+[] sso:idAv 400 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/400> .
+
+[] sso:idAv 201 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/201> .
+
+[] sso:idAv 816 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/816> .
+
+[] sso:idAv 795 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/795> .
+
+[] sso:idAv 823 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/823> .
+
+[] sso:idAv 864 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/864> .
+
+[] sso:idAv 92 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/92> .
+
+[] sso:idAv 428 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/428> .
+
+[] sso:idAv 496 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/496> .
+
+[] sso:idAv 665 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/665> .
+
+[] sso:idAv 303 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/303> .
+
+[] sso:idAv 459 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/459> .
+
+[] sso:idAv 540 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/540> .
+
+[] sso:idAv 980 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/980> .
+
+[] sso:idAv 883 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/883> .
+
+[] sso:idAv 605 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/605> .
+
+[] sso:idAv 278 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/278> .
+
+[] sso:idAv 960 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/960> .
+
+[] sso:idAv 850 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/850> .
+
+[] sso:idAv 778 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/778> .
+
+[] sso:idAv 639 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/639> .
+
+[] sso:idAv 231 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/231> .
+
+[] sso:idAv 1048 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1048> .
+
+[] sso:idAv 6 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/6> .
+
+[] sso:idAv 285 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/285> .
+
+[] sso:idAv 970 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/970> .
+
+[] sso:idAv 265 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/265> .
+
+[] sso:idAv 115 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/115> .
+
+[] sso:idAv 509 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/509> .
+
+[] sso:idAv 998 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/998> .
+
+[] sso:idAv 1019 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1019> .
+
+[] sso:idAv 891 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/891> .
+
+[] sso:idAv 1027 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1027> .
+
+[] sso:idAv 640 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/640> .
+
+[] sso:idAv 13 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/13> .
+
+[] sso:idAv 599 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/599> .
+
+[] sso:idAv 35 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/35> .
+
+[] sso:idAv 336 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/336> .
+
+[] sso:idAv 844 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/844> .
+
+[] sso:idAv 75 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/75> .
+
+[] sso:idAv 142 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/142> .
+
+[] sso:idAv 869 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/869> .
+
+[] sso:idAv 651 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/651> .
+
+[] sso:idAv 506 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/506> .
+
+[] sso:idAv 588 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/588> .
+
+[] sso:idAv 561 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/561> .
+
+[] sso:idAv 38 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/38> .
+
+[] sso:idAv 190 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/190> .
+
+[] sso:idAv 117 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/117> .
+
+[] sso:idAv 387 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/387> .
+
+[] sso:idAv 654 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/654> .
+
+[] sso:idAv 110 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/110> .
+
+[] sso:idAv 471 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/471> .
+
+[] sso:idAv 625 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/625> .
+
+[] sso:idAv 368 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/368> .
+
+[] sso:idAv 369 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/369> .
+
+[] sso:idAv 949 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/949> .
+
+[] sso:idAv 436 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/436> .
+
+[] sso:idAv 699 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/699> .
+
+[] sso:idAv 803 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/803> .
+
+[] sso:idAv 822 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/822> .
+
+[] sso:idAv 205 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/205> .
+
+[] sso:idAv 460 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/460> .
+
+[] sso:idAv 534 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/534> .
+
+[] sso:idAv 476 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/476> .
+
+[] sso:idAv 683 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/683> .
+
+[] sso:idAv 209 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/209> .
+
+[] sso:idAv 858 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/858> .
+
+[] sso:idAv 181 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/181> .
+
+[] sso:idAv 467 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/467> .
+
+[] sso:idAv 47 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/47> .
+
+[] sso:idAv 618 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/618> .
+
+[] sso:idAv 1037 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1037> .
+
+[] sso:idAv 346 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/346> .
+
+[] sso:idAv 638 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/638> .
+
+[] sso:idAv 37 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/37> .
+
+[] sso:idAv 430 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/430> .
+
+[] sso:idAv 569 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/569> .
+
+[] sso:idAv 966 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/966> .
+
+[] sso:idAv 1001 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1001> .
+
+[] sso:idAv 124 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/124> .
+
+[] sso:idAv 200 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/200> .
+
+[] sso:idAv 246 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/246> .
+
+[] sso:idAv 701 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/701> .
+
+[] sso:idAv 689 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/689> .
+
+[] sso:idAv 457 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/457> .
+
+[] sso:idAv 59 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/59> .
+
+[] sso:idAv 426 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/426> .
+
+[] sso:idAv 726 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/726> .
+
+[] sso:idAv 69 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/69> .
+
+[] sso:idAv 295 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/295> .
+
+[] sso:idAv 967 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/967> .
+
+[] sso:idAv 87 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/87> .
+
+[] sso:idAv 309 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/309> .
+
+[] sso:idAv 1034 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1034> .
+
+[] sso:idAv 513 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/513> .
+
+[] sso:idAv 169 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/169> .
+
+[] sso:idAv 280 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/280> .
+
+[] sso:idAv 356 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/356> .
+
+[] sso:idAv 393 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/393> .
+
+[] sso:idAv 620 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/620> .
+
+[] sso:idAv 113 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/113> .
+
+[] sso:idAv 167 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/167> .
+
+[] sso:idAv 545 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/545> .
+
+[] sso:idAv 837 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/837> .
+
+[] sso:idAv 754 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/754> .
+
+[] sso:idAv 657 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/657> .
+
+[] sso:idAv 314 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/314> .
+
+[] sso:idAv 1050 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1050> .
+
+[] sso:idAv 587 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/587> .
+
+[] sso:idAv 815 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/815> .
+
+[] sso:idAv 481 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/481> .
+
+[] sso:idAv 401 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/401> .
+
+[] sso:idAv 364 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/364> .
+
+[] sso:idAv 191 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/191> .
+
+[] sso:idAv 856 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/856> .
+
+[] sso:idAv 781 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/781> .
+
+[] sso:idAv 333 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/333> .
+
+[] sso:idAv 293 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/293> .
+
+[] sso:idAv 136 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/136> .
+
+[] sso:idAv 810 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/810> .
+
+[] sso:idAv 243 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/243> .
+
+[] sso:idAv 544 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/544> .
+
+[] sso:idAv 946 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/946> .
+
+[] sso:idAv 664 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/664> .
+
+[] sso:idAv 739 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/739> .
+
+[] sso:idAv 1014 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1014> .
+
+[] sso:idAv 565 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/565> .
+
+[] sso:idAv 523 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/523> .
+
+[] sso:idAv 104 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/104> .
+
+[] sso:idAv 902 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/902> .
+
+[] sso:idAv 363 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/363> .
+
+[] sso:idAv 787 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/787> .
+
+[] sso:idAv 386 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/386> .
+
+[] sso:idAv 668 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/668> .
+
+[] sso:idAv 407 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/407> .
+
+[] sso:idAv 42 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/42> .
+
+[] sso:idAv 501 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/501> .
+
+[] sso:idAv 857 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/857> .
+
+[] sso:idAv 127 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/127> .
+
+[] sso:idAv 214 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/214> .
+
+[] sso:idAv 1006 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1006> .
+
+[] sso:idAv 818 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/818> .
+
+[] sso:idAv 433 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/433> .
+
+[] sso:idAv 791 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/791> .
+
+[] sso:idAv 859 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/859> .
+
+[] sso:idAv 98 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/98> .
+
+[] sso:idAv 24 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/24> .
+
+[] sso:idAv 319 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/319> .
+
+[] sso:idAv 472 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/472> .
+
+[] sso:idAv 89 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/89> .
+
+[] sso:idAv 77 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/77> .
+
+[] sso:idAv 578 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/578> .
+
+[] sso:idAv 538 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/538> .
+
+[] sso:idAv 503 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/503> .
+
+[] sso:idAv 690 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/690> .
+
+[] sso:idAv 9 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/9> .
+
+[] sso:idAv 632 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/632> .
+
+[] sso:idAv 814 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/814> .
+
+[] sso:idAv 111 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/111> .
+
+[] sso:idAv 853 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/853> .
+
+[] sso:idAv 563 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/563> .
+
+[] sso:idAv 321 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/321> .
+
+[] sso:idAv 527 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/527> .
+
+[] sso:idAv 221 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/221> .
+
+[] sso:idAv 131 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/131> .
+
+[] sso:idAv 494 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/494> .
+
+[] sso:idAv 957 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/957> .
+
+[] sso:idAv 257 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/257> .
+
+[] sso:idAv 933 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/933> .
+
+[] sso:idAv 60 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/60> .
+
+[] sso:idAv 629 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/629> .
+
+[] sso:idAv 643 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/643> .
+
+[] sso:idAv 132 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/132> .
+
+[] sso:idAv 305 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/305> .
+
+[] sso:idAv 532 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/532> .
+
+[] sso:idAv 1043 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1043> .
+
+[] sso:idAv 595 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/595> .
+
+[] sso:idAv 764 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/764> .
+
+[] sso:idAv 17 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/17> .
+
+[] sso:idAv 746 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/746> .
+
+[] sso:idAv 405 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/405> .
+
+[] sso:idAv 341 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/341> .
+
+[] sso:idAv 621 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/621> .
+
+[] sso:idAv 765 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/765> .
+
+[] sso:idAv 72 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/72> .
+
+[] sso:idAv 122 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/122> .
+
+[] sso:idAv 325 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/325> .
+
+[] sso:idAv 870 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/870> .
+
+[] sso:idAv 168 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/168> .
+
+[] sso:idAv 269 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/269> .
+
+[] sso:idAv 884 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/884> .
+
+[] sso:idAv 912 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/912> .
+
+[] sso:idAv 783 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/783> .
+
+[] sso:idAv 731 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/731> .
+
+[] sso:idAv 119 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/119> .
+
+[] sso:idAv 274 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/274> .
+
+[] sso:idAv 576 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/576> .
+
+[] sso:idAv 997 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/997> .
+
+[] sso:idAv 130 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/130> .
+
+[] sso:idAv 330 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/330> .
+
+[] sso:idAv 215 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/215> .
+
+[] sso:idAv 249 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/249> .
+
+[] sso:idAv 1025 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1025> .
+
+[] sso:idAv 455 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/455> .
+
+[] sso:idAv 63 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/63> .
+
+[] sso:idAv 207 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/207> .
+
+[] sso:idAv 984 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/984> .
+
+[] sso:idAv 923 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/923> .
+
+[] sso:idAv 442 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/442> .
+
+[] sso:idAv 579 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/579> .
+
+[] sso:idAv 4 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/4> .
+
+[] sso:idAv 112 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/112> .
+
+[] sso:idAv 1063 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1063> .
+
+[] sso:idAv 819 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/819> .
+
+[] sso:idAv 756 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/756> .
+
+[] sso:idAv 730 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/730> .
+
+[] sso:idAv 757 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/757> .
+
+[] sso:idAv 218 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/218> .
+
+[] sso:idAv 867 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/867> .
+
+[] sso:idAv 186 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/186> .
+
+[] sso:idAv 421 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/421> .
+
+[] sso:idAv 392 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/392> .
+
+[] sso:idAv 49 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/49> .
+
+[] sso:idAv 567 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/567> .
+
+[] sso:idAv 824 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/824> .
+
+[] sso:idAv 147 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/147> .
+
+[] sso:idAv 963 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/963> .
+
+[] sso:idAv 838 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/838> .
+
+[] sso:idAv 752 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/752> .
+
+[] sso:idAv 976 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/976> .
+
+[] sso:idAv 713 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/713> .
+
+[] sso:idAv 724 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/724> .
+
+[] sso:idAv 1010 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1010> .
+
+[] sso:idAv 924 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/924> .
+
+[] sso:idAv 66 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/66> .
+
+[] sso:idAv 543 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/543> .
+
+[] sso:idAv 1036 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1036> .
+
+[] sso:idAv 418 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/418> .
+
+[] sso:idAv 738 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/738> .
+
+[] sso:idAv 300 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/300> .
+
+[] sso:idAv 848 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/848> .
+
+[] sso:idAv 992 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/992> .
+
+[] sso:idAv 90 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/90> .
+
+[] sso:idAv 219 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/219> .
+
+[] sso:idAv 504 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/504> .
+
+[] sso:idAv 385 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/385> .
+
+[] sso:idAv 227 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/227> .
+
+[] sso:idAv 493 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/493> .
+
+[] sso:idAv 940 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/940> .
+
+[] sso:idAv 36 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/36> .
+
+[] sso:idAv 282 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/282> .
+
+[] sso:idAv 958 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/958> .
+
+[] sso:idAv 180 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/180> .
+
+[] sso:idAv 1028 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1028> .
+
+[] sso:idAv 1021 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1021> .
+
+[] sso:idAv 840 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/840> .
+
+[] sso:idAv 845 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/845> .
+
+[] sso:idAv 253 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/253> .
+
+[] sso:idAv 174 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/174> .
+
+[] sso:idAv 719 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/719> .
+
+[] sso:idAv 512 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/512> .
+
+[] sso:idAv 343 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/343> .
+
+[] sso:idAv 11 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/11> .
+
+[] sso:idAv 641 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/641> .
+
+[] sso:idAv 762 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/762> .
+
+[] sso:idAv 518 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/518> .
+
+[] sso:idAv 114 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/114> .
+
+[] sso:idAv 510 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/510> .
+
+[] sso:idAv 660 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/660> .
+
+[] sso:idAv 456 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/456> .
+
+[] sso:idAv 571 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/571> .
+
+[] sso:idAv 394 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/394> .
+
+[] sso:idAv 26 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/26> .
+
+[] sso:idAv 698 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/698> .
+
+[] sso:idAv 1044 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1044> .
+
+[] sso:idAv 199 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/199> .
+
+[] sso:idAv 973 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/973> .
+
+[] sso:idAv 338 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/338> .
+
+[] sso:idAv 475 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/475> .
+
+[] sso:idAv 28 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/28> .
+
+[] sso:idAv 519 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/519> .
+
+[] sso:idAv 745 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/745> .
+
+[] sso:idAv 522 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/522> .
+
+[] sso:idAv 161 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/161> .
+
+[] sso:idAv 619 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/619> .
+
+[] sso:idAv 439 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/439> .
+
+[] sso:idAv 255 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/255> .
+
+[] sso:idAv 107 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/107> .
+
+[] sso:idAv 170 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/170> .
+
+[] sso:idAv 974 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/974> .
+
+[] sso:idAv 802 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/802> .
+
+[] sso:idAv 158 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/158> .
+
+[] sso:idAv 40 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/40> .
+
+[] sso:idAv 54 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/54> .
+
+[] sso:idAv 769 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/769> .
+
+[] sso:idAv 3 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/3> .
+
+[] sso:idAv 154 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/154> .
+
+[] sso:idAv 415 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/415> .
+
+[] sso:idAv 427 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/427> .
+
+[] sso:idAv 868 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/868> .
+
+[] sso:idAv 547 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/547> .
+
+[] sso:idAv 347 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/347> .
+
+[] sso:idAv 326 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/326> .
+
+[] sso:idAv 801 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/801> .
+
+[] sso:idAv 988 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/988> .
+
+[] sso:idAv 260 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/260> .
+
+[] sso:idAv 84 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/84> .
+
+[] sso:idAv 685 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/685> .
+
+[] sso:idAv 286 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/286> .
+
+[] sso:idAv 551 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/551> .
+
+[] sso:idAv 123 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/123> .
+
+[] sso:idAv 419 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/419> .
+
+[] sso:idAv 594 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/594> .
+
+[] sso:idAv 993 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/993> .
+
+[] sso:idAv 171 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/171> .
+
+[] sso:idAv 584 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/584> .
+
+[] sso:idAv 312 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/312> .
+
+[] sso:idAv 292 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/292> .
+
+[] sso:idAv 800 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/800> .
+
+[] sso:idAv 116 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/116> .
+
+[] sso:idAv 25 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/25> .
+
+[] sso:idAv 254 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/254> .
+
+[] sso:idAv 603 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/603> .
+
+[] sso:idAv 438 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/438> .
+
+[] sso:idAv 500 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/500> .
+
+[] sso:idAv 95 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/95> .
+
+[] sso:idAv 804 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/804> .
+
+[] sso:idAv 1062 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1062> .
+
+[] sso:idAv 1 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1> .
+
+[] sso:idAv 609 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/609> .
+
+[] sso:idAv 737 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/737> .
+
+[] sso:idAv 182 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/182> .
+
+[] sso:idAv 68 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/68> .
+
+[] sso:idAv 499 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/499> .
+
+[] sso:idAv 684 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/684> .
+
+[] sso:idAv 969 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/969> .
+
+[] sso:idAv 46 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/46> .
+
+[] sso:idAv 794 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/794> .
+
+[] sso:idAv 165 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/165> .
+
+[] sso:idAv 451 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/451> .
+
+[] sso:idAv 355 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/355> .
+
+[] sso:idAv 753 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/753> .
+
+[] sso:idAv 44 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/44> .
+
+[] sso:idAv 995 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/995> .
+
+[] sso:idAv 863 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/863> .
+
+[] sso:idAv 375 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/375> .
+
+[] sso:idAv 785 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/785> .
+
+[] sso:idAv 602 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/602> .
+
+[] sso:idAv 281 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/281> .
+
+[] sso:idAv 650 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/650> .
+
+[] sso:idAv 821 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/821> .
+
+[] sso:idAv 652 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/652> .
+
+[] sso:idAv 434 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/434> .
+
+[] sso:idAv 900 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/900> .
+
+[] sso:idAv 747 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/747> .
+
+[] sso:idAv 710 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/710> .
+
+[] sso:idAv 358 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/358> .
+
+[] sso:idAv 1065 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1065> .
+
+[] sso:idAv 1051 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1051> .
+
+[] sso:idAv 953 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/953> .
+
+[] sso:idAv 770 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/770> .
+
+[] sso:idAv 384 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/384> .
+
+[] sso:idAv 1047 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1047> .
+
+[] sso:idAv 758 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/758> .
+
+[] sso:idAv 1056 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1056> .
+
+[] sso:idAv 187 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/187> .
+
+[] sso:idAv 656 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/656> .
+
+[] sso:idAv 722 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/722> .
+
+[] sso:idAv 917 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/917> .
+
+[] sso:idAv 742 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/742> .
+
+[] sso:idAv 813 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/813> .
+
+[] sso:idAv 425 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/425> .
+
+[] sso:idAv 961 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/961> .
+
+[] sso:idAv 367 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/367> .
+
+[] sso:idAv 673 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/673> .
+
+[] sso:idAv 178 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/178> .
+
+[] sso:idAv 792 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/792> .
+
+[] sso:idAv 412 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/412> .
+
+[] sso:idAv 1041 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1041> .
+
+[] sso:idAv 360 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/360> .
+
+[] sso:idAv 121 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/121> .
+
+[] sso:idAv 514 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/514> .
+
+[] sso:idAv 81 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/81> .
+
+[] sso:idAv 718 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/718> .
+
+[] sso:idAv 529 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/529> .
+
+[] sso:idAv 704 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/704> .
+
+[] sso:idAv 429 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/429> .
+
+[] sso:idAv 855 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/855> .
+
+[] sso:idAv 27 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/27> .
+
+[] sso:idAv 317 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/317> .
+
+[] sso:idAv 498 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/498> .
+
+[] sso:idAv 925 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/925> .
+
+[] sso:idAv 623 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/623> .
+
+[] sso:idAv 21 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/21> .
+
+[] sso:idAv 91 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/91> .
+
+[] sso:idAv 895 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/895> .
+
+[] sso:idAv 741 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/741> .
+
+[] sso:idAv 1054 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1054> .
+
+[] sso:idAv 335 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/335> .
+
+[] sso:idAv 598 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/598> .
+
+[] sso:idAv 417 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/417> .
+
+[] sso:idAv 41 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/41> .
+
+[] sso:idAv 502 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/502> .
+
+[] sso:idAv 1015 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1015> .
+
+[] sso:idAv 865 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/865> .
+
+[] sso:idAv 560 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/560> .
+
+[] sso:idAv 999 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/999> .
+
+[] sso:idAv 291 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/291> .
+
+[] sso:idAv 897 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/897> .
+
+[] sso:idAv 431 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/431> .
+
+[] sso:idAv 894 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/894> .
+
+[] sso:idAv 236 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/236> .
+
+[] sso:idAv 914 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/914> .
+
+[] sso:idAv 809 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/809> .
+
+[] sso:idAv 166 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/166> .
+
+[] sso:idAv 172 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/172> .
+
+[] sso:idAv 811 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/811> .
+
+[] sso:idAv 733 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/733> .
+
+[] sso:idAv 482 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/482> .
+
+[] sso:idAv 389 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/389> .
+
+[] sso:idAv 492 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/492> .
+
+[] sso:idAv 468 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/468> .
+
+[] sso:idAv 301 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/301> .
+
+[] sso:idAv 14 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/14> .
+
+[] sso:idAv 624 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/624> .
+
+[] sso:idAv 365 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/365> .
+
+[] sso:idAv 843 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/843> .
+
+[] sso:idAv 979 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/979> .
+
+[] sso:idAv 2 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/2> .
+
+[] sso:idAv 521 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/521> .
+
+[] sso:idAv 462 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/462> .
+
+[] sso:idAv 983 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/983> .
+
+[] sso:idAv 734 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/734> .
+
+[] sso:idAv 968 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/968> .
+
+[] sso:idAv 101 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/101> .
+
+[] sso:idAv 349 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/349> .
+
+[] sso:idAv 118 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/118> .
+
+[] sso:idAv 661 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/661> .
+
+[] sso:idAv 228 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/228> .
+
+[] sso:idAv 875 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/875> .
+
+[] sso:idAv 550 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/550> .
+
+[] sso:idAv 919 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/919> .
+
+[] sso:idAv 273 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/273> .
+
+[] sso:idAv 366 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/366> .
+
+[] sso:idAv 779 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/779> .
+
+[] sso:idAv 536 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/536> .
+
+[] sso:idAv 446 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/446> .
+
+[] sso:idAv 996 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/996> .
+
+[] sso:idAv 508 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/508> .
+
+[] sso:idAv 1005 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1005> .
+
+[] sso:idAv 408 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/408> .
+
+[] sso:idAv 531 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/531> .
+
+[] sso:idAv 1053 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1053> .
+
+[] sso:idAv 637 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/637> .
+
+[] sso:idAv 954 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/954> .
+
+[] sso:idAv 323 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/323> .
+
+[] sso:idAv 647 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/647> .
+
+[] sso:idAv 562 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/562> .
+
+[] sso:idAv 535 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/535> .
+
+[] sso:idAv 58 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/58> .
+
+[] sso:idAv 128 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/128> .
+
+[] sso:idAv 354 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/354> .
+
+[] sso:idAv 34 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/34> .
+
+[] sso:idAv 262 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/262> .
+
+[] sso:idAv 645 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/645> .
+
+[] sso:idAv 470 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/470> .
+
+[] sso:idAv 985 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/985> .
+
+[] sso:idAv 1007 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1007> .
+
+[] sso:idAv 440 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/440> .
+
+[] sso:idAv 1033 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1033> .
+
+[] sso:idAv 604 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/604> .
+
+[] sso:idAv 671 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/671> .
+
+[] sso:idAv 782 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/782> .
+
+[] sso:idAv 526 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/526> .
+
+[] sso:idAv 1055 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1055> .
+
+[] sso:idAv 473 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/473> .
+
+[] sso:idAv 574 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/574> .
+
+[] sso:idAv 658 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/658> .
+
+[] sso:idAv 982 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/982> .
+
+[] sso:idAv 233 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/233> .
+
+[] sso:idAv 302 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/302> .
+
+[] sso:idAv 959 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/959> .
+
+[] sso:idAv 703 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/703> .
+
+[] sso:idAv 304 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/304> .
+
+[] sso:idAv 909 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/909> .
+
+[] sso:idAv 220 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/220> .
+
+[] sso:idAv 962 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/962> .
+
+[] sso:idAv 138 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/138> .
+
+[] sso:idAv 771 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/771> .
+
+[] sso:idAv 195 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/195> .
+
+[] sso:idAv 994 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/994> .
+
+[] sso:idAv 833 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/833> .
+
+[] sso:idAv 920 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/920> .
+
+[] sso:idAv 607 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/607> .
+
+[] sso:idAv 276 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/276> .
+
+[] sso:idAv 486 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/486> .
+
+[] sso:idAv 242 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/242> .
+
+[] sso:idAv 681 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/681> .
+
+[] sso:idAv 729 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/729> .
+
+[] sso:idAv 371 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/371> .
+
+[] sso:idAv 444 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/444> .
+
+[] sso:idAv 102 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/102> .
+
+[] sso:idAv 345 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/345> .
+
+[] sso:idAv 461 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/461> .
+
+[] sso:idAv 264 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/264> .
+
+[] sso:idAv 528 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/528> .
+
+[] sso:idAv 556 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/556> .
+
+[] sso:idAv 51 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/51> .
+
+[] sso:idAv 30 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/30> .
+
+[] sso:idAv 1008 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1008> .
+
+[] sso:idAv 251 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/251> .
+
+[] sso:idAv 1003 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1003> .
+
+[] sso:idAv 507 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/507> .
+
+[] sso:idAv 43 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/43> .
+
+[] sso:idAv 1020 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1020> .
+
+[] sso:idAv 378 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/378> .
+
+[] sso:idAv 140 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/140> .
+
+[] sso:idAv 331 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/331> .
+
+[] sso:idAv 890 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/890> .
+
+[] sso:idAv 808 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/808> .
+
+[] sso:idAv 310 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/310> .
+
+[] sso:idAv 192 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/192> .
+
+[] sso:idAv 793 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/793> .
+
+[] sso:idAv 53 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/53> .
+
+[] sso:idAv 1017 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1017> .
+
+[] sso:idAv 830 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/830> .
+
+[] sso:idAv 750 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/750> .
+
+[] sso:idAv 611 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/611> .
+
+[] sso:idAv 380 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/380> .
+
+[] sso:idAv 593 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/593> .
+
+[] sso:idAv 680 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/680> .
+
+[] sso:idAv 635 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/635> .
+
+[] sso:idAv 751 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/751> .
+
+[] sso:idAv 299 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/299> .
+
+[] sso:idAv 841 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/841> .
+
+[] sso:idAv 144 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/144> .
+
+[] sso:idAv 1026 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1026> .
+
+[] sso:idAv 644 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/644> .
+
+[] sso:idAv 642 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/642> .
+
+[] sso:idAv 213 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/213> .
+
+[] sso:idAv 353 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/353> .
+
+[] sso:idAv 464 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/464> .
+
+[] sso:idAv 585 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/585> .
+
+[] sso:idAv 156 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/156> .
+
+[] sso:idAv 636 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/636> .
+
+[] sso:idAv 820 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/820> .
+
+[] sso:idAv 150 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/150> .
+
+[] sso:idAv 376 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/376> .
+
+[] sso:idAv 329 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/329> .
+
+[] sso:idAv 663 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/663> .
+
+[] sso:idAv 712 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/712> .
+
+[] sso:idAv 16 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/16> .
+
+[] sso:idAv 350 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/350> .
+
+[] sso:idAv 448 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/448> .
+
+[] sso:idAv 424 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/424> .
+
+[] sso:idAv 328 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/328> .
+
+[] sso:idAv 577 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/577> .
+
+[] sso:idAv 568 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/568> .
+
+[] sso:idAv 67 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/67> .
+
+[] sso:idAv 851 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/851> .
+
+[] sso:idAv 836 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/836> .
+
+[] sso:idAv 628 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/628> .
+
+[] sso:idAv 846 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/846> .
+
+[] sso:idAv 193 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/193> .
+
+[] sso:idAv 903 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/903> .
+
+[] sso:idAv 542 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/542> .
+
+[] sso:idAv 391 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/391> .
+
+[] sso:idAv 948 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/948> .
+
+[] sso:idAv 931 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/931> .
+
+[] sso:idAv 105 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/105> .
+
+[] sso:idAv 688 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/688> .
+
+[] sso:idAv 1058 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1058> .
+
+[] sso:idAv 597 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/597> .
+
+[] sso:idAv 248 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/248> .
+
+[] sso:idAv 1032 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1032> .
+
+[] sso:idAv 799 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/799> .
+
+[] sso:idAv 491 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/491> .
+
+[] sso:idAv 549 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/549> .
+
+[] sso:idAv 422 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/422> .
+
+[] sso:idAv 224 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/224> .
+
+[] sso:idAv 83 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/83> .
+
+[] sso:idAv 382 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/382> .
+
+[] sso:idAv 469 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/469> .
+
+[] sso:idAv 374 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/374> .
+
+[] sso:idAv 320 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/320> .
+
+[] sso:idAv 950 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/950> .
+
+[] sso:idAv 133 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/133> .
+
+[] sso:idAv 283 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/283> .
+
+[] sso:idAv 399 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/399> .
+
+[] sso:idAv 409 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/409> .
+
+[] sso:idAv 485 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/485> .
+
+[] sso:idAv 57 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/57> .
+
+[] sso:idAv 160 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/160> .
+
+[] sso:idAv 687 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/687> .
+
+[] sso:idAv 659 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/659> .
+
+[] sso:idAv 807 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/807> .
+
+[] sso:idAv 876 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/876> .
+
+[] sso:idAv 449 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/449> .
+
+[] sso:idAv 937 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/937> .
+
+[] sso:idAv 1030 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1030> .
+
+[] sso:idAv 50 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/50> .
+
+[] sso:idAv 648 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/648> .
+
+[] sso:idAv 735 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/735> .
+
+[] sso:idAv 1004 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1004> .
+
+[] sso:idAv 935 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/935> .
+
+[] sso:idAv 452 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/452> .
+
+[] sso:idAv 646 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/646> .
+
+[] sso:idAv 555 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/555> .
+
+[] sso:idAv 153 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/153> .
+
+[] sso:idAv 240 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/240> .
+
+[] sso:idAv 805 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/805> .
+
+[] sso:idAv 177 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/177> .
+
+[] sso:idAv 290 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/290> .
+
+[] sso:idAv 381 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/381> .
+
+[] sso:idAv 252 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/252> .
+
+[] sso:idAv 284 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/284> .
+
+[] sso:idAv 1059 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1059> .
+
+[] sso:idAv 244 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/244> .
+
+[] sso:idAv 370 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/370> .
+
+[] sso:idAv 307 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/307> .
+
+[] sso:idAv 812 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/812> .
+
+[] sso:idAv 772 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/772> .
+
+[] sso:idAv 86 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/86> .
+
+[] sso:idAv 537 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/537> .
+
+[] sso:idAv 682 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/682> .
+
+[] sso:idAv 633 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/633> .
+
+[] sso:idAv 926 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/926> .
+
+[] sso:idAv 52 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/52> .
+
+[] sso:idAv 511 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/511> .
+
+[] sso:idAv 198 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/198> .
+
+[] sso:idAv 978 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/978> .
+
+[] sso:idAv 373 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/373> .
+
+[] sso:idAv 275 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/275> .
+
+[] sso:idAv 413 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/413> .
+
+[] sso:idAv 271 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/271> .
+
+[] sso:idAv 402 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/402> .
+
+[] sso:idAv 1040 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1040> .
+
+[] sso:idAv 608 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/608> .
+
+[] sso:idAv 947 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/947> .
+
+[] sso:idAv 582 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/582> .
+
+[] sso:idAv 383 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/383> .
+
+[] sso:idAv 344 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/344> .
+
+[] sso:idAv 918 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/918> .
+
+[] sso:idAv 786 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/786> .
+
+[] sso:idAv 194 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/194> .
+
+[] sso:idAv 175 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/175> .
+
+[] sso:idAv 697 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/697> .
+
+[] sso:idAv 743 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/743> .
+
+[] sso:idAv 397 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/397> .
+
+[] sso:idAv 852 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/852> .
+
+[] sso:idAv 435 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/435> .
+
+[] sso:idAv 934 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/934> .
+
+[] sso:idAv 775 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/775> .
+
+[] sso:idAv 327 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/327> .
+
+[] sso:idAv 94 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/94> .
+
+[] sso:idAv 480 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/480> .
+
+[] sso:idAv 806 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/806> .
+
+[] sso:idAv 197 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/197> .
+
+[] sso:idAv 991 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/991> .
+
+[] sso:idAv 709 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/709> .
+
+[] sso:idAv 311 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/311> .
+
+[] sso:idAv 148 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/148> .
+
+[] sso:idAv 357 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/357> .
+
+[] sso:idAv 1022 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1022> .
+
+[] sso:idAv 32 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/32> .
+
+[] sso:idAv 942 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/942> .
+
+[] sso:idAv 65 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/65> .
+
+[] sso:idAv 862 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/862> .
+
+[] sso:idAv 423 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/423> .
+
+[] sso:idAv 896 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/896> .
+
+[] sso:idAv 583 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/583> .
+
+[] sso:idAv 989 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/989> .
+
+[] sso:idAv 706 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/706> .
+
+[] sso:idAv 463 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/463> .
+
+[] sso:idAv 964 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/964> .
+
+[] sso:idAv 1045 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1045> .
+
+[] sso:idAv 653 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/653> .
+
+[] sso:idAv 702 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/702> .
+
+[] sso:idAv 1061 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1061> .
+
+[] sso:idAv 450 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/450> .
+
+[] sso:idAv 134 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/134> .
+
+[] sso:idAv 854 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/854> .
+
+[] sso:idAv 965 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/965> .
+
+[] sso:idAv 20 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/20> .
+
+[] sso:idAv 1031 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1031> .
+
+[] sso:idAv 615 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/615> .
+
+[] sso:idAv 776 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/776> .
+
+[] sso:idAv 445 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/445> .
+
+[] sso:idAv 204 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/204> .
+
+[] sso:idAv 557 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/557> .
+
+[] sso:idAv 173 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/173> .
+
+[] sso:idAv 237 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/237> .
+
+[] sso:idAv 524 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/524> .
+
+[] sso:idAv 235 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/235> .
+
+[] sso:idAv 796 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/796> .
+
+[] sso:idAv 211 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/211> .
+
+[] sso:idAv 315 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/315> .
+
+[] sso:idAv 553 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/553> .
+
+[] sso:idAv 313 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/313> .
+
+[] sso:idAv 80 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/80> .
+
+[] sso:idAv 129 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/129> .
+
+[] sso:idAv 495 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/495> .
+
+[] sso:idAv 306 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/306> .
+
+[] sso:idAv 842 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/842> .
+
+[] sso:idAv 586 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/586> .
+
+[] sso:idAv 185 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/185> .
+
+[] sso:idAv 626 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/626> .
+
+[] sso:idAv 696 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/696> .
+
+[] sso:idAv 339 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/339> .
+
+[] sso:idAv 749 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/749> .
+
+[] sso:idAv 930 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/930> .
+
+[] sso:idAv 986 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/986> .
+
+[] sso:idAv 458 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/458> .
+
+[] sso:idAv 552 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/552> .
+
+[] sso:idAv 728 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/728> .
+
+[] sso:idAv 139 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/139> .
+
+[] sso:idAv 705 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/705> .
+
+[] sso:idAv 1012 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1012> .
+
+[] sso:idAv 334 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/334> .
+
+[] sso:idAv 515 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/515> .
+
+[] sso:idAv 675 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/675> .
+
+[] sso:idAv 143 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/143> .
+
+[] sso:idAv 700 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/700> .
+
+[] sso:idAv 888 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/888> .
+
+[] sso:idAv 655 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/655> .
+
+[] sso:idAv 913 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/913> .
+
+[] sso:idAv 71 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/71> .
+
+[] sso:idAv 465 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/465> .
+
+[] sso:idAv 61 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/61> .
+
+[] sso:idAv 146 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/146> .
+
+[] sso:idAv 414 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/414> .
+
+[] sso:idAv 610 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/610> .
+
+[] sso:idAv 612 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/612> .
+
+[] sso:idAv 831 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/831> .
+
+[] sso:idAv 922 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/922> .
+
+[] sso:idAv 96 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/96> .
+
+[] sso:idAv 613 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/613> .
+
+[] sso:idAv 15 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/15> .
+
+[] sso:idAv 889 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/889> .
+
+[] sso:idAv 126 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/126> .
+
+[] sso:idAv 827 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/827> .
+
+[] sso:idAv 987 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/987> .
+
+[] sso:idAv 956 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/956> .
+
+[] sso:idAv 798 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/798> .
+
+[] sso:idAv 163 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/163> .
+
+[] sso:idAv 109 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/109> .
+
+[] sso:idAv 672 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/672> .
+
+[] sso:idAv 938 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/938> .
+
+[] sso:idAv 183 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/183> .
+
+[] sso:idAv 945 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/945> .
+
+[] sso:idAv 723 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/723> .
+
+[] sso:idAv 1011 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1011> .
+
+[] sso:idAv 546 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/546> .
+
+[] sso:idAv 554 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/554> .
+
+[] sso:idAv 259 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/259> .
+
+[] sso:idAv 250 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/250> .
+
+[] sso:idAv 8 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/8> .
+
+[] sso:idAv 222 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/222> .
+
+[] sso:idAv 152 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/152> .
+
+[] sso:idAv 348 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/348> .
+
+[] sso:idAv 1018 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1018> .
+
+[] sso:idAv 247 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/247> .
+
+[] sso:idAv 176 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/176> .
+
+[] sso:idAv 910 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/910> .
+
+[] sso:idAv 676 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/676> .
+
+[] sso:idAv 516 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/516> .
+
+[] sso:idAv 377 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/377> .
+
+[] sso:idAv 744 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/744> .
+
+[] sso:idAv 590 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/590> .
+
+[] sso:idAv 740 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/740> .
+
+[] sso:idAv 882 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/882> .
+
+[] sso:idAv 1064 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1064> .
+
+[] sso:idAv 1029 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1029> .
+
+[] sso:idAv 288 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/288> .
+
+[] sso:idAv 773 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/773> .
+
+[] sso:idAv 878 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/878> .
+
+[] sso:idAv 277 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/277> .
+
+[] sso:idAv 797 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/797> .
+
+[] sso:idAv 1024 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/1024> .
+
+[] sso:idAv 489 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/489> .
+
+[] sso:idAv 790 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/790> .
+
+[] sso:idAv 270 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/270> .
+
+[] sso:idAv 789 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/789> .
+
+[] sso:idAv 911 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/911> .
+
+[] sso:idAv 627 ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/aree_verdi/627> .
+
+_:N5f23ae389eb147118aa18b73b102083d sso:idArpa 9 ;
+    sso:monitoraInquinante <http://www.qualitaariamilano.it/resource/NO2>,
+        <http://www.qualitaariamilano.it/resource/O3>,
+        <http://www.qualitaariamilano.it/resource/PM10>,
+        <http://www.qualitaariamilano.it/resource/PM25>,
+        <http://www.qualitaariamilano.it/resource/SO2> ;
+    owl:sameAs <http://www.qualitaariamilano.it/resource/stazioni/9> .
+
